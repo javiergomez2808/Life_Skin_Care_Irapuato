@@ -49,13 +49,13 @@ const i18n = {
     hours_sat: "Sabados",
     hours_sun: "Domingos",
     hours_closed: "Cerrado",
-    reviews_title: "Resenas",
+    reviews_title: "Reseñas",
     reviews_subtitle:
       "Lo que dicen nuestros clientes sobre su experiencia en Life Skin Care Irapuato.",
-    reviews_aria: "Resenas de clientes",
-    review_prev: "Resena anterior",
-    review_next: "Siguiente resena",
-    review_dots: "Seleccionar resena",
+    reviews_aria: "Reseñas de clientes",
+    review_prev: "Reseña anterior",
+    review_next: "Siguiente reseña",
+    review_dots: "Seleccionar reseña",
     contact_title: "Reserva con nosotros",
     contact_text:
       "Para programar una cita, pongase en contacto con nosotros directamente. Estaremos encantados de ayudarle y confirmar la disponibilidad.",
