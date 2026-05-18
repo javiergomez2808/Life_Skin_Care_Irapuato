@@ -6,7 +6,7 @@ const i18n = {
       "Life Skin Care Irapuato ofrece masajes, faciales, tratamientos corporales y paquetes en un ambiente en calma y moderno.",
     nav_services: "Servicios",
     nav_about: "Acerca de Nosotros",
-    nav_reviews: "Resenas",
+    nav_reviews: "Reseñas",
     nav_book: "Reserva",
     nav_cursos: "Cursos",
     language_label: "Selector de idioma",
