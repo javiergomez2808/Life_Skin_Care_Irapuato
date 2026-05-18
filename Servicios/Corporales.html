@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/jpg" href="../images/life skin care color.jpg" />
+  <title>Tratamientos Corporales Reductivos y Anticelulíticos en Irapuato | Life Skin Care</title>
+  <meta name="description" content="Tratamientos corporales reductivos, HIFEM, anticelulíticos y postquirúrgicos en Life Skin Care Irapuato, Guanajuato. Moldea tu figura y recupera la confianza en tu cuerpo." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tratamientos Corporales en Irapuato | Life Skin Care" />
+  <meta property="og:description" content="Reductivos, HIFEM, anticelulíticos y postquirúrgicos en Irapuato, Guanajuato. Tecnología y profesionalismo para transformar tu cuerpo." />
+  <meta property="og:locale" content="es_MX" />
+  <link rel="stylesheet" href="../static/styleservicios.css" />
+    <script src="../servicios/Corporales.js" defer></script>
+  <style>
+    .services-page {
+      padding-top: 72px;
+    }
+
+    .services-page .lead {
+      max-width: 70ch;
+    }
+
+    .service-cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .service-card--expandable {
+      overflow: hidden;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .service-card__toggle {
+      width: 100%;
+      display: grid;
+      gap: 14px;
+      padding: 14px;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      text-align: left;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .service-card__toggle:focus-visible {
+      outline: 3px solid rgba(185, 225, 239, 0.42);
+      outline-offset: -3px;
+      border-radius: var(--radius-lg);
+    }
+
+    .service-card__top {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .service-card__image {
+      min-height: 160px;
+      border-radius: 16px;
+      background-size: cover;
+      background-position: center;
+      border: 1px solid rgba(127, 91, 178, 0.2);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.24);
+    }
+
+    .service-card__summary {
+      display: grid;
+      gap: 8px;
+      align-content: center;
+    }
+
+    .service-card__summary h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: var(--brown-900);
+    }
+
+    .service-card__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(127, 91, 178, 0.1);
+      border: 1px solid rgba(127, 91, 178, 0.16);
+      color: var(--brown-700);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .service-card__summary p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .service-card__hint {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--brown-700);
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .service-card__icon {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(126, 198, 221, 0.2), rgba(127, 91, 178, 0.22));
+      color: var(--brown-900);
+      font-size: 1.2rem;
+      transition: transform 0.2s ease;
+    }
+
+    .service-card--expandable.is-open .service-card__icon {
+      transform: rotate(45deg);
+    }
+
+    .service-card__panel {
+      display: grid;
+      gap: 14px;
+      padding: 0 18px 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .service-card__panel[hidden] {
+      display: none;
+    }
+
+    .service-card__panel p {
+      margin: 0;
+    }
+
+    .service-card__panel strong {
+      color: var(--brown-900);
+    }
+
+    .checklist {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--text);
+      display: grid;
+      gap: 8px;
+    }
+
+    .contact-card {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 980px) {
+      .service-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .services-page {
+        padding-top: 56px;
+      }
+
+      .service-card__top {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card__image {
+        min-height: 220px;
+      }
+
+      .service-card__panel {
+        padding: 0 14px 14px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .service-card__icon,
+      .service-card--expandable {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="../index.html#home" aria-label="Life Skin Care Irapuato Home">
+        <span class="brand__text">Life Skin Care Irapuato</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#contact" class="btn btn--sm">Reserva</a>
+        <label class="sr-only" for="language-select">Selector de idioma</label>
+        <select id="language-select" class="language-select" aria-label="Selector de idioma">
+          <option value="es" selected>Español</option>
+          <option value="en">English</option>
+        </select>
+      </nav>
+    </div>
+  </header>
+
+      <!-- Intro -->
+  <main class="services-page">
+    <section class="hero hero--gallery">
+      <div class="container">
+        <div class="section__head section__head--left">
+          <p class="pill">Bienestar Corporal</p>
+          <h1>Reductivos Corporales</h1>
+        </div>
+      <div>          
+        <img src="../images/Corporales/Reductivo.png">
+      </div>
+      </div>
+    </section>
+
+    <section class="section intro">
+      <div class="container intro__content">
+        <p class="lead">
+          Tratamientos corporales reductivos, anticelulíticos, HIFEM y postquirúrgicos en Irapuato, diseñados para moldear tu figura, mejorar la firmeza de tu piel y renovar tu confianza.
+        </p>
+        <div class="hero__actions">
+          <a class="btn" href="#contact">Reserva con nosotros</a>
+          <a class="btn btn--ghost" href="../index.html#services">Volver a servicios</a>
+        </div>
+      </div>
+    </section>
+
+<!-- Corporales Inicio -->
+<section id="corporales" class="section section--alt">
+  <div class="container">
+
+    <!-- Corporales Servicios -->
+    <div class="service-cards">
+      <article class="service-card service-card--expandable reveal is-visible" data-accordion>
+        <button class="service-card__toggle" type="button" aria-expanded="true">
+          <div class="service-card__top">
+            <div class="service-card__image" style="background-image: url('../images/Corporales/Reductivos.png');"></div>
+            <div class="service-card__summary">
+              <span class="service-card__eyebrow">Reductivos Corporales</span>
+              <h3>Moldea tu figura y revitaliza tu cuerpo</h3>
+              <p>Tratamiento integral para reducir medidas, mejorar la textura de la piel y favorecer la eliminación de toxinas.</p>
+              <div class="service-card__hint">
+                <span>Ver descripción</span>
+                <span class="service-card__icon" aria-hidden="true">+</span>
+              </div>
+            </div>
+          </div>
+        </button>
+        <div class="service-card__panel">
+          <p>
+            Este tratamiento combina técnicas manuales y aparatología avanzada para lograr una reducción efectiva de medidas,
+            mejorar la textura de la piel y favorecer la eliminación de toxinas. En Life Skin Care Irapuato lo ofrecemos como
+            una experiencia completa que une tradición, innovación y bienestar.
+          </p>
+
+          <p class="muted"><strong>¿En qué consiste?</strong></p>
+          <ul class="checklist">
+            <li>Maderoterapia: masaje con instrumentos de madera que estimula la circulación y ayuda a moldear la silueta.</li>
+            <li>Mascarillas corporales: aplicación de activos naturales que nutren y tonifican la piel.</li>
+            <li>Envolturas: técnicas que favorecen la sudoración y eliminación de líquidos retenidos.</li>
+            <li>Aparatología especializada: equipos que potencian los resultados, como cavitación, radiofrecuencia o presoterapia.</li>
+          </ul>
+
+          <p class="muted"><strong>Beneficios principales</strong></p>
+          <ul class="checklist">
+            <li>Reducción de medidas y mejora del contorno corporal.</li>
+            <li>Estimulación del metabolismo y eliminación de toxinas.</li>
+            <li>Piel más firme, suave y tonificada.</li>
+            <li>Sensación de ligereza y bienestar integral.</li>
+          </ul>
+
+          <p class="muted small">
+            En Life Skin Care Irapuato, el tratamiento reductivo integral se convierte en un ritual de belleza y salud,
+            diseñado para transformar tu cuerpo y renovar tu energía.
+          </p>
+        </div>
+      </article>
+
+      <article class="service-card service-card--expandable reveal is-visible" data-accordion>
+        <button class="service-card__toggle" type="button" aria-expanded="false">
+          <div class="service-card__top">
+            <div class="service-card__image" style="background-image: url('../images/Corporales/HIFEM.png');"></div>
+            <div class="service-card__summary">
+              <span class="service-card__eyebrow">HIFEM</span>
+              <h3>Tonificación avanzada, aumento de glúteo y firmeza corporal</h3>
+              <p>Energía electromagnética focalizada para fortalecer músculo, reducir grasa localizada y mejorar la firmeza.</p>
+              <div class="service-card__hint">
+                <span>Ver descripción</span>
+                <span class="service-card__icon" aria-hidden="true">+</span>
+              </div>
+            </div>
+          </div>
+        </button>
+        <div class="service-card__panel" hidden>
+          <p>
+            El tratamiento con HIFEM (High-Intensity Focused Electromagnetic) utiliza energía electromagnética focalizada
+            para provocar contracciones musculares intensas y profundas, imposibles de lograr con ejercicio convencional.
+            Estas contracciones estimulan el crecimiento y fortalecimiento muscular, favorecen la reducción de grasa localizada
+            y potencian la firmeza de los tejidos.
+          </p>
+
+          <p class="muted"><strong>¿En qué consiste?</strong></p>
+          <ul class="checklist">
+            <li>Aplicación de ondas electromagnéticas en zonas específicas como abdomen, glúteos, brazos o piernas.</li>
+            <li>Sesiones cómodas y no invasivas, realizadas en cabina especializada.</li>
+            <li>Contracciones musculares equivalentes a miles de repeticiones en pocos minutos.</li>
+            <li>Procedimiento seguro y eficaz, sin tiempo de recuperación.</li>
+          </ul>
+
+          <p class="muted"><strong>Beneficios principales</strong></p>
+          <ul class="checklist">
+            <li>Aumento y tonificación de glúteos, logrando mayor volumen y firmeza.</li>
+            <li>Reducción de grasa localizada en abdomen, brazos y muslos.</li>
+            <li>Mejora de la definición y fuerza muscular.</li>
+            <li>Tratamiento reafirmante que mejora la elasticidad y firmeza de la piel.</li>
+            <li>Resultados visibles desde las primeras sesiones.</li>
+          </ul>
+
+          <p class="muted small">
+            En Life Skin Care Irapuato, el tratamiento HIFEM se ofrece como una alternativa innovadora para quienes buscan
+            esculpir su figura, reafirmar su cuerpo y potenciar su energía física con tecnología de última generación.
+          </p>
+        </div>
+      </article>
+
+      <article class="service-card service-card--expandable reveal is-visible" data-accordion>
+        <button class="service-card__toggle" type="button" aria-expanded="false">
+          <div class="service-card__top">
+            <div class="service-card__image" style="background-image: url('../images/Corporales/Anticeluliticos.png');"></div>
+            <div class="service-card__summary">
+              <span class="service-card__eyebrow">Anticelulíticos</span>
+              <h3>Suavidad, firmeza y armonía corporal</h3>
+              <p>Tratamientos diseñados para reducir la apariencia de la celulitis y mejorar la textura de la piel.</p>
+              <div class="service-card__hint">
+                <span>Ver descripción</span>
+                <span class="service-card__icon" aria-hidden="true">+</span>
+              </div>
+            </div>
+          </div>
+        </button>
+        <div class="service-card__panel" hidden>
+          <p>
+            Los tratamientos anticelulíticos están diseñados para reducir la apariencia de la celulitis, mejorar la textura
+            de la piel y favorecer la circulación. En Life Skin Care Irapuato combinamos técnicas manuales, aparatología y
+            productos especializados para lograr resultados visibles y duraderos.
+          </p>
+
+          <p class="muted"><strong>¿En qué consiste?</strong></p>
+          <ul class="checklist">
+            <li>Masajes reductivos y drenaje linfático para estimular la circulación.</li>
+            <li>Uso de aparatología avanzada como radiofrecuencia, cavitación, presoterapia o maderoterapia.</li>
+            <li>Aplicación de geles y mascarillas con activos reafirmantes y lipolíticos.</li>
+            <li>Protocolos personalizados según el tipo y grado de celulitis.</li>
+          </ul>
+
+          <p class="muted"><strong>Beneficios principales</strong></p>
+          <ul class="checklist">
+            <li>Reducción de la apariencia de la celulitis.</li>
+            <li>Piel más firme, suave y uniforme.</li>
+            <li>Estimulación del metabolismo y eliminación de toxinas.</li>
+            <li>Mejora de la circulación y oxigenación de los tejidos.</li>
+            <li>Sensación de ligereza y bienestar corporal.</li>
+          </ul>
+
+          <p class="muted small">
+            En Life Skin Care Irapuato, los tratamientos anticelulíticos se convierten en una experiencia integral que combina
+            ciencia, estética y bienestar, ayudándote a recuperar la confianza en tu cuerpo.
+          </p>
+        </div>
+      </article>
+
+      <article class="service-card service-card--expandable reveal is-visible" data-accordion>
+        <button class="service-card__toggle" type="button" aria-expanded="false">
+          <div class="service-card__top">
+            <div class="service-card__image" style="background-image: url('../images/Corporales/Postquirurgicos.png');"></div>
+            <div class="service-card__summary">
+              <span class="service-card__eyebrow">Postquirúrgicos</span>
+              <h3>Recuperación segura y bienestar integral</h3>
+              <p>Tratamientos especializados para acompañar la recuperación después de una cirugía estética o médica.</p>
+              <div class="service-card__hint">
+                <span>Ver descripción</span>
+                <span class="service-card__icon" aria-hidden="true">+</span>
+              </div>
+            </div>
+          </div>
+        </button>
+        <div class="service-card__panel" hidden>
+          <p>
+            Los tratamientos postquirúrgicos están diseñados para acompañar el proceso de recuperación después de una cirugía
+            estética o médica. En Life Skin Care Irapuato aplicamos técnicas especializadas y en base a las indicaciones médicas
+            que favorecen la pronta recuperación, la cicatrización, reducen la inflamación y ayudan al cuerpo a recuperar su
+            equilibrio de manera más rápida y cómoda.
+          </p>
+
+          <p class="muted"><strong>¿En qué consisten?</strong></p>
+          <ul class="checklist">
+            <li>Drenaje linfático manual: estimula la eliminación de líquidos retenidos y toxinas.</li>
+            <li>Masajes suaves y terapéuticos: favorecen la circulación y reducen la inflamación.</li>
+            <li>Aparatología especializada: equipos como ultrasonido clínico, presoterapia o radiofrecuencia para acelerar la recuperación.</li>
+            <li>Cuidados personalizados: protocolos adaptados al tipo de cirugía y necesidades individuales.</li>
+          </ul>
+
+          <p class="muted"><strong>Beneficios principales</strong></p>
+          <ul class="checklist">
+            <li>Reducción de la inflamación y los hematomas.</li>
+            <li>Mejora de la cicatrización y regeneración de tejidos.</li>
+            <li>Disminución del dolor y sensación de incomodidad.</li>
+            <li>Recuperación más rápida y segura.</li>
+            <li>Prevención de fibrosis.</li>
+            <li>Bienestar físico y emocional durante el proceso postquirúrgico.</li>
+          </ul>
+
+          <p class="muted small">
+            En Life Skin Care Irapuato, los tratamientos postquirúrgicos se realizan con profesionalismo y cuidado,
+            ofreciendo un acompañamiento integral que apoya tu recuperación y realza los resultados de tu cirugía.
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+  </main>
+
+      <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; <span id="year"></span> Life Skin Care Irapuato. All rights reserved.</p>
+      <div class="footer__links">
+        <a href="#corporales">Corporales</a>
+        <a href="#contact">Reserva</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = Array.from(document.querySelectorAll("[data-accordion]"));
+
+      const setOpenState = (card, open) => {
+        const trigger = card.querySelector(".service-card__toggle");
+        const panel = card.querySelector(".service-card__panel");
+
+        card.classList.toggle("is-open", open);
+        trigger.setAttribute("aria-expanded", open ? "true" : "false");
+        panel.hidden = !open;
+      };
+
+      cards.forEach((card, index) => {
+        const trigger = card.querySelector(".service-card__toggle");
+        setOpenState(card, index === 0);
+
+        trigger.addEventListener("click", () => {
+          const isOpen = trigger.getAttribute("aria-expanded") === "true";
+
+          cards.forEach((item) => setOpenState(item, false));
+          if (!isOpen) setOpenState(card, true);
+        });
+      });
+
+      const year = document.getElementById("year");
+      if (year) year.textContent = String(new Date().getFullYear());
+    });
+  </script>
+</body>
+</html>

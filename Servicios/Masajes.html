@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/jpg" href="../images/life skin care color.jpg" />
+  <title>Masajes Terapéuticos y Relajantes en Irapuato | Life Skin Care</title>
+  <meta name="description" content="Masajes relajantes, terapéuticos, deportivos, Shiatsu, Lomi Lomi, piedras calientes y más en Life Skin Care Irapuato, Guanajuato. Especialistas en bienestar corporal. ¡Reserva tu cita hoy!" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Masajes Terapéuticos y Relajantes en Irapuato | Life Skin Care" />
+  <meta property="og:description" content="Masajes relajantes, terapéuticos, deportivos, Shiatsu, Lomi Lomi y más. Especialistas en bienestar corporal en Irapuato, Guanajuato." />
+  <meta property="og:locale" content="es_MX" />
+  <link rel="stylesheet" href="../static/styleservicios.css" />
+    <script src="../servicios/Masajes.js" defer></script>
+  <style>
+    .services-page {
+      padding-top: 72px;
+    }
+
+    .services-page .lead {
+      max-width: 70ch;
+    }
+
+    .service-cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .service-card--expandable {
+      overflow: hidden;
+      padding: 0;
+      cursor: pointer;
+    }
+
+    .service-card__toggle {
+      width: 100%;
+      display: grid;
+      gap: 14px;
+      padding: 14px;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      text-align: left;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .service-card__toggle:focus-visible {
+      outline: 3px solid rgba(185, 225, 239, 0.42);
+      outline-offset: -3px;
+      border-radius: var(--radius-lg);
+    }
+
+    .service-card__top {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .service-card__image {
+      min-height: 160px;
+      border-radius: 16px;
+      background-size: cover;
+      background-position: center;
+      border: 1px solid rgba(127, 91, 178, 0.2);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.24);
+    }
+
+    .service-card__summary {
+      display: grid;
+      gap: 8px;
+      align-content: center;
+    }
+
+    .service-card__summary h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: var(--brown-900);
+    }
+
+    .service-card__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      width: fit-content;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(127, 91, 178, 0.1);
+      border: 1px solid rgba(127, 91, 178, 0.16);
+      color: var(--brown-700);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    .service-card__summary p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .service-card__hint {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      color: var(--brown-700);
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .service-card__icon {
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(126, 198, 221, 0.2), rgba(127, 91, 178, 0.22));
+      color: var(--brown-900);
+      font-size: 1.2rem;
+      transition: transform 0.2s ease;
+    }
+
+    .service-card--expandable.is-open .service-card__icon {
+      transform: rotate(45deg);
+    }
+
+    .service-card__panel {
+      display: grid;
+      gap: 14px;
+      padding: 0 18px 18px;
+      border-top: 1px solid var(--line);
+    }
+
+    .service-card__panel[hidden] {
+      display: none;
+    }
+
+    .service-card__panel p {
+      margin: 0;
+    }
+
+    .service-card__panel strong {
+      color: var(--brown-900);
+    }
+
+    .checklist {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--text);
+      display: grid;
+      gap: 8px;
+    }
+
+    .contact-card {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 980px) {
+      .service-cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .services-page {
+        padding-top: 56px;
+      }
+
+      .service-card__top {
+        grid-template-columns: 1fr;
+      }
+
+      .service-card__image {
+        min-height: 220px;
+      }
+
+      .service-card__panel {
+        padding: 0 14px 14px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .service-card__icon,
+      .service-card--expandable {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="../index.html#home" aria-label="Life Skin Care Irapuato Home">
+        <span class="brand__text">Life Skin Care Irapuato</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#contact" class="btn btn--sm">Reserva</a>
+        <label class="sr-only" for="language-select">Selector de idioma</label>
+        <select id="language-select" class="language-select" aria-label="Selector de idioma">
+          <option value="es" selected>Español</option>
+          <option value="en">English</option>
+        </select>
+      </nav>
+    </div>
+  </header>
+
+      <!-- Intro -->
+  <main class="services-page">
+    <section class="hero hero--gallery">
+      <div class="container">
+        <div class="section__head section__head--left">
+          <p class="pill">Bienestar Corporal</p>
+          <h1>Nuestros Masajes</h1>
+        </div>
+      <div>          
+        <img src="../images/Masajes/Relajante.png">
+      </div>
+      </div>
+    </section>
+
+    <section class="section intro">
+      <div class="container intro__content">
+        <p class="lead">
+          Descubre nuestros tratamientos de spa, masajes terapéuticos y faciales en Irapuato, diseñados para mejorar tu bienestar, cuidar tu piel y renovar tu energía.
+        </p>
+        <div class="hero__actions">
+          <a class="btn" href="#contact">Reserva con nosotros</a>
+          <a class="btn btn--ghost" href="../index.html#services">Volver a servicios</a>
+        </div>
+      </div>
+    </section>
+
+        <!-- Masjes Inicio -->
+    <section id="masajes" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2>Masajes Disponibles</h2>
+          <p class="muted">Selecciona una tarjeta para desplegar su contenido completo.</p>
+        </div>
+
+            <!-- Masajes Servicios -->
+        <div class="service-cards">
+          <article class="service-card service-card--expandable reveal is-visible" data-accordion>
+            <button class="service-card__toggle" type="button" aria-expanded="true">
+              <div class="service-card__top">
+                <div class="service-card__image" style="background-image: url('../images/Masajes/Relajante.png');"></div>
+                <div class="service-card__summary">
+                  <span class="service-card__eyebrow">Masaje relajante</span>
+                  <h3>Desconecta y recupera equilibrio</h3>
+                  <p>Movimientos suaves y armoniosos para disminuir estres y renovar energia.</p>
+                  <p>Precio desde $600.00 MXN</p>
+                  <p>Duración 45 minutos</p>
+                  <div class="service-card__hint">
+                    <span>Ver descripción</span>
+                    <span class="service-card__icon" aria-hidden="true">+</span>
+                  </div>
+                </div>
+              </div>
+            </button>
+            <div class="service-card__panel">
+              <p>
+El masaje relajante ayuda a liberar tensiones, reducir el estrés y recuperar el equilibrio del cuerpo mediante movimientos suaves y armoniosos.              </p>
+              <p class="muted"><strong>Ideal para quienes buscan una pausa real dentro de la rutina.</strong></p>
+              <ul class="checklist">
+                <li>Disminuye ansiedad y cansancio acumulado.</li>
+                <li>Relaja musculos y mejora la calidad del descanso.</li>
+                <li>Genera bienestar físico y mental.</li>
+              </ul>
+              <p class="muted small">
+              En Life Skin Care Irapuato cada sesión se realiza en un ambiente cálido con música suave y aromaterapia.              </p>
+            </div>
+          </article>
+
+          <article class="service-card service-card--expandable reveal is-visible" data-accordion>
+            <button class="service-card__toggle" type="button" aria-expanded="false">
+              <div class="service-card__top">
+                <div class="service-card__image" style="background-image: url('../images/Masajes/Descontracturante.png');"></div>
+                <div class="service-card__summary">
+                  <span class="service-card__eyebrow">Descontracturante</span>
+                  <h3>Alivio profundo para zonas tensionadas</h3>
+                  <p>Trabajo firme en espalda, cuello y hombros para liberar nudos musculares.</p>
+                  <p>Precio desde $600.00 MXN</p>
+                  <p>Duración 45 minutos</p>
+                  <div class="service-card__hint">
+                    <span>Ver descripción</span>
+                    <span class="service-card__icon" aria-hidden="true">+</span>
+                  </div>
+                </div>
+              </div>
+            </button>
+            <div class="service-card__panel" hidden>
+              <p>
+Este masaje trabaja zonas de mayor rigidez como espalda, cuello y hombros mediante técnicas profundas que liberan contracturas y mejoran la movilidad.
+              </p>
+              <ul class="checklist">
+                <li>Maniobras firmes y profundas para liberar contracturas.</li>
+                <li>Favorece la circulacion y la oxigenacion de los tejidos.</li>
+                <li>Contribuye a mejorar postura, movilidad y descanso.</li>
+                <li>Reduce dolor y fatiga muscular de forma inmediata.</li>
+              </ul>
+              <p class="muted small">Se realiza con precision terapeutica y un enfoque totalmente personalizado.</p>
+            </div>
+          </article>
+
+          <article class="service-card service-card--expandable reveal is-visible" data-accordion>
+            <button class="service-card__toggle" type="button" aria-expanded="false">
+              <div class="service-card__top">
+                <div class="service-card__image" style="background-image: url('../images/Masajes/Shiatsu.png');"></div>
+                <div class="service-card__summary">
+                  <span class="service-card__eyebrow">Shiatsu</span>
+                  <h3>Equilibrio y energia a traves del tacto</h3>
+                  <p>Presion manual en puntos clave para armonizar cuerpo y mente.</p>
+                  <p>Precio desde $700.00 MXN</p>
+                  <p>Duración 45 minutos</p>
+                  <div class="service-card__hint">
+                    <span>Ver descripción</span>
+                    <span class="service-card__icon" aria-hidden="true">+</span>
+                  </div>
+                </div>
+              </div>
+            </button>
+            <div class="service-card__panel" hidden>
+              <p>
+                El Shiatsu utiliza presión con dedos y palmas en puntos específicos del cuerpo para equilibrar la energía vital y aliviar tensiones.
+              </p>
+              <ul class="checklist">
+                <li>Se aplica con dedos, palmas y manos en puntos estrategicos.</li>
+                <li>Estimula circulacion energetica y sanguinea.</li>
+                <li>Ayuda a reducir estres, ansiedad y molestias musculares.</li>
+                <li>Se realiza sin aceites y con ropa comoda.</li>
+              </ul>
+              <p class="muted small">Una experiencia de tradicion oriental con enfoque relajante y terapeutico.</p>
+            </div>
+          </article>
+
+          <article class="service-card service-card--expandable reveal is-visible" data-accordion>
+            <button class="service-card__toggle" type="button" aria-expanded="false">
+              <div class="service-card__top">
+                <div class="service-card__image" style="background-image: url('../images/Masajes/Tuina.png');"></div>
+                <div class="service-card__summary">
+                  <span class="service-card__eyebrow">Tuina</span>
+                  <h3>Armonia corporal desde la medicina china</h3>
+                  <p>Presiones, estiramientos y movilizaciones para equilibrar el Qi.</p>
+                  <p>Precio desde $600.00 MXN</p>
+                  <p>Duración 45 minutos</p>
+                  <div class="service-card__hint">
+                    <span>Ver descripción</span>
+                    <span class="service-card__icon" aria-hidden="true">+</span>
+                  </div>
+                </div>
+              </div>
+            </button>
+            <div class="service-card__panel" hidden>
+              <p>
+El masaje Tuina combina presiones, estiramientos y movilizaciones para estimular el flujo de energía (Qi) y mejorar la salud integral.
+              </p>
+              <ul class="checklist">
+                <li>Trabaja puntos energeticos, articulaciones y tejidos blandos.</li>
+                <li>Estimula el flujo de energia a traves de meridianos.</li>
+                <li>Mejora circulacion, sistema linfatico y movilidad.</li>
+                <li>Apoya procesos de recuperacion fisica y estres cronico.</li>
+              </ul>
+              <p class="muted small">La intensidad se ajusta de acuerdo con las necesidades de cada paciente.</p>
+            </div>
+          </article>
+
+          <article class="service-card service-card--expandable reveal is-visible" data-accordion>
+            <button class="service-card__toggle" type="button" aria-expanded="false">
+              <div class="service-card__top">
+                <div class="service-card__image" style="background-image: url('../images/Masajes/Tailandes.png');"></div>
+                <div class="service-card__summary">
+                  <span class="service-card__eyebrow">Tailandes</span>
+                  <h3>Flexibilidad, energia y movilidad</h3>
+                  <p>Estiramientos asistidos y presion profunda con ritmo fluido.</p>
+                  <p>Precio desde $600.00 MXN</p>
+                  <p>Duración 45 minutos</p>
+                  <div class="service-card__hint">
+                    <span>Ver descripción</span>
+                    <span class="service-card__icon" aria-hidden="true">+</span>
+                  </div>
+                </div>
+              </div>
+            </button>
+            <div class="service-card__panel" hidden>
+              <p>
+Técnica ancestral que combina estiramientos asistidos similares al yoga con presiones profundas.
+              </p>
+              <ul class="checklist">
+                <li>Mejora flexibilidad, postura y movilidad articular.</li>
+                <li>Estimula sistema circulatorio y linfatico.</li>
+                <li>Reduce estres fisico y mental.</li>
+                <li>Activa el flujo energetico del cuerpo.</li>
+              </ul>
+              <p class="muted small">Ideal para quienes buscan una experiencia mas activa y terapeutica.</p>
+            </div>
+          </article>
+
+          <article class="service-card service-card--expandable reveal is-visible" data-accordion>
+            <button class="service-card__toggle" type="button" aria-expanded="false">
+              <div class="service-card__top">
+                <div class="service-card__image" style="background-image: url('../images/Masajes/Lomi.png');"></div>
+                <div class="service-card__summary">
+                  <span class="service-card__eyebrow">Lomi Lomi Nui</span>
+                  <h3>La danza sanadora de Hawai</h3>
+                  <p>Movimientos largos y envolventes para liberar bloqueos fisicos y emocionales.</p>
+                  <p>Precio desde $600.00 MXN</p>
+                  <p>Duración 45 minutos</p>
+                  <div class="service-card__hint">
+                    <span>Ver descripción</span>
+                    <span class="service-card__icon" aria-hidden="true">+</span>
+                  </div>
+                </div>
+              </div>
+            </button>
+            <div class="service-card__panel" hidden>
+              <p>
+Técnica tradicional de Hawái caracterizada por movimientos largos y fluidos que relajan cuerpo y mente.
+              </p>
+              <ul class="checklist">
+                <li>Promueve relajacion profunda y renovacion interior.</li>
+                <li>Libera tensiones musculares y emocionales.</li>
+                <li>Estimula circulacion y energia vital.</li>
+                <li>Integra cuerpo, mente y espiritu en una sola experiencia.</li>
+              </ul>
+              <p class="muted small">Una propuesta sensorial envolvente inspirada en el ritmo del mar.</p>
+            </div>
+          </article>
+
+          <article class="service-card service-card--expandable reveal is-visible" data-accordion>
+            <button class="service-card__toggle" type="button" aria-expanded="false">
+              <div class="service-card__top">
+                <div class="service-card__image" style="background-image: url('../images/Masajes/Piedras.png');"></div>
+                <div class="service-card__summary">
+                  <span class="service-card__eyebrow">Ritual de Piedras Calientes</span>
+                  <h3>Calor terapeutico y relajacion profunda</h3>
+                  <p>Termoterapia con masaje relajante para soltar tension muscular.</p>
+                  <p>Precio desde $800.00 MXN</p>
+                  <p>Duración 45 minutos</p>
+                  <div class="service-card__hint">
+                    <span>Ver descripción</span>
+                    <span class="service-card__icon" aria-hidden="true">+</span>
+                  </div>
+                </div>
+              </div>
+            </button>
+            <div class="service-card__panel" hidden>
+              <p>
+Utiliza 37 piedras volcánicas calientes colocadas en puntos estratégicos del cuerpo para liberar tensiones musculares.
+              </p>
+              <ul class="checklist">
+                <li>Relajacion muscular intensa y sostenida.</li>
+                <li>Reduccion del estres y la ansiedad.</li>
+                <li>Mejora de circulacion y oxigenacion corporal.</li>
+                <li>Sensacion de equilibrio fisico y energetico.</li>
+              </ul>
+              <p class="muted small">Una opcion ideal para quien busca descanso profundo con un componente termico.</p>
+            </div>
+          </article>
+
+          <article class="service-card service-card--expandable reveal is-visible" data-accordion>
+            <button class="service-card__toggle" type="button" aria-expanded="false">
+              <div class="service-card__top">
+                <div class="service-card__image" style="background-image: url('../images/Masajes/Terapeutico.png');"></div>
+                <div class="service-card__summary">
+                  <span class="service-card__eyebrow">TerapÉutico</span>
+                  <h3>Cuidado integral para recuperacion fisica</h3>
+                  <p>Maniobras profundas y precisas para dolor, rigidez y movilidad.</p>
+                  <p>Precio desde $450.00 MXN</p>
+                  <p>Duración 45 minutos</p>
+                  <div class="service-card__hint">
+                    <span>Ver descripción</span>
+                    <span class="service-card__icon" aria-hidden="true">+</span>
+                  </div>
+                </div>
+              </div>
+            </button>
+            <div class="service-card__panel" hidden>
+              <p>
+Combina técnicas profundas para tratar lesiones, contracturas y mejorar la movilidad.
+              </p>
+              <ul class="checklist">
+                <li>Trabaja musculos y tejidos blandos con objetivo clinico.</li>
+                <li>Ayuda a mejorar postura y movilidad.</li>
+                <li>Reduce fatiga y molestias articulares.</li>
+                <li>Apoya rehabilitacion y prevencion de recaidas.</li>
+              </ul>
+              <p class="muted small">Combina alivio inmediato con una intencion terapeutica clara.</p>
+            </div>
+          </article>
+
+          <article class="service-card service-card--expandable reveal is-visible" data-accordion>
+            <button class="service-card__toggle" type="button" aria-expanded="false">
+              <div class="service-card__top">
+                <div class="service-card__image" style="background-image: url('../images/Masajes/Deportivo.png');"></div>
+                <div class="service-card__summary">
+                  <span class="service-card__eyebrow">Deportivo</span>
+                  <h3>Recuperacion avanzada y prevencion</h3>
+                  <p>Masaje profundo con tecnicas complementarias para deportistas y alta demanda fisica.</p>
+                  <p>Precio desde $600.00 MXN</p>
+                  <p>Duración 45 minutos</p>
+                  <div class="service-card__hint">
+                    <span>Ver descripción</span>
+                    <span class="service-card__icon" aria-hidden="true">+</span>
+                  </div>
+                </div>
+              </div>
+            </button>
+            <div class="service-card__panel" hidden>
+              <p>
+Masaje especializado para deportistas que puede incluir técnicas como ventosas, acupuntura, moxas y vendaje neuromuscular.
+              </p>
+              <ul class="checklist">
+                <li>Acelera recuperacion despues del esfuerzo fisico.</li>
+                <li>Reduce dolor muscular y articular.</li>
+                <li>Mejora movilidad, flexibilidad y rendimiento.</li>
+                <li>Ayuda a prevenir lesiones y mantener soporte funcional.</li>
+              </ul>
+              <p class="muted small">Enfoque integral para cuerpos sometidos a exigencia fisica constante.</p>
+            </div>
+          </article>
+
+          <article class="service-card service-card--expandable reveal is-visible" data-accordion>
+            <button class="service-card__toggle" type="button" aria-expanded="false">
+              <div class="service-card__top">
+                <div class="service-card__image" style="background-image: url('../images/Masajes/drenaje');"></div>
+                <div class="service-card__summary">
+                  <span class="service-card__eyebrow">Drenaje Linfático</span>
+                  <h3>Ligereza y depuracion corporal</h3>
+                  <p>Movimientos suaves para estimular el sistema linfatico y disminuir retencion.</p>
+                  <p>Precio desde $600.00 MXN</p>
+                  <p>Duración 45 minutos</p>
+                  <div class="service-card__hint">
+                    <span>Ver descripción</span>
+                    <span class="service-card__icon" aria-hidden="true">+</span>
+                  </div>
+                </div>
+              </div>
+            </button>
+            <div class="service-card__panel" hidden>
+              <p>
+                Tecnica delicada y precisa que favorece la eliminacion de toxinas y liquidos retenidos,
+                brindando una sensacion marcada de ligereza.
+              </p>
+              <ul class="checklist">
+                <li>Reduce hinchazon y retencion de liquidos.</li>
+                <li>Mejora la circulacion linfatica y sanguinea.</li>
+                <li>Apoya procesos postquirurgicos y recuperacion estetica.</li>
+                <li>Ofrece relajacion profunda sin maniobras invasivas.</li>
+              </ul>
+              <p class="muted small">Se adapta a cada necesidad con una ejecucion suave y profesional.</p>
+            </div>
+          </article>
+
+           <article class="service-card service-card--expandable reveal is-visible" data-accordion>
+            <button class="service-card__toggle" type="button" aria-expanded="false">
+              <div class="service-card__top">
+                <div class="service-card__image" style="background-image: url('../images/Masajes/Ayurveda.png');"></div>
+                <div class="service-card__summary">
+                  <span class="service-card__eyebrow">Ayurveda</span>
+                  <h3>Armonía y equilibrio desde la India</h3>
+                  <p>Técnica holística con aceites tibios y movimientos envolventes para equilibrar cuerpo, mente y espíritu.</p>
+                  <p>Precio desde $600.00 MXN</p>
+                  <p>Duración 45 minutos</p>
+                  <div class="service-card__hint">
+                    <span>Ver descripción</span>
+                    <span class="service-card__icon" aria-hidden="true">+</span>
+                  </div>
+                </div>
+              </div>
+            </button>
+            <div class="service-card__panel" hidden>
+              <p>
+                Masaje Ayurveda originario de la India que utiliza aceites tibios y movimientos envolventes para armonizar el cuerpo, la mente y el espíritu según los principios de la medicina ayurvédica.
+              </p>
+              <ul class="checklist">
+                <li>Equilibra los doshas (energías vitales) del cuerpo.</li>
+                <li>Nutre la piel con aceites naturales especializados.</li>
+                <li>Profunda relajación física y mental.</li>
+                <li>Estimula la circulación y desintoxicación natural.</li>
+              </ul>
+              <p class="muted small">Una experiencia sensorial única que conecta tradición milenaria con bienestar contemporáneo.</p>
+            </div>
+          </article>
+
+           <article class="service-card service-card--expandable reveal is-visible" data-accordion>
+            <button class="service-card__toggle" type="button" aria-expanded="false">
+              <div class="service-card__top">
+                <div class="service-card__image" style="background-image: url('../images/Masajes/Miyana.png');"></div>
+                <div class="service-card__summary">
+                  <span class="service-card__eyebrow">Miyana</span>
+                  <h3>Relajación profunda y reconexión interior</h3>
+                  <p>Técnica de masaje que combina movimientos rítmicos y trabajo energético para restaurar el equilibrio.</p>
+                  <p>Precio desde $600.00 MXN</p>
+                  <p>Duración 45 minutos</p>
+                  <div class="service-card__hint">
+                    <span>Ver descripción</span>
+                    <span class="service-card__icon" aria-hidden="true">+</span>
+                  </div>
+                </div>
+              </div>
+            </button>
+            <div class="service-card__panel" hidden>
+              <p>
+                Técnica de masaje que integra movimientos rítmicos y fluidos con trabajo en puntos energéticos, buscando restaurar el equilibrio físico y emocional del cuerpo.
+              </p>
+              <ul class="checklist">
+                <li>Favorece la relajación profunda y el descanso reparador.</li>
+                <li>Reduce la tensión muscular acumulada.</li>
+                <li>Promueve el equilibrio energético y emocional.</li>
+                <li>Estimula la circulación y el bienestar general.</li>
+              </ul>
+              <p class="muted small">Una experiencia personalizada que se adapta a las necesidades físicas y emocionales de cada persona.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Reserva -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-card">
+          <div class="section__head">
+            <h2>Reserva con nosotros</h2>
+            <p class="muted">
+              Para programar una cita, contactanos directamente y confirma disponibilidad.
+            </p>
+          </div>
+
+          <div class="card contact__card">
+            <div class="contact__line">
+            </div>
+            <div class="contact__line">
+              <strong>WhatsApp:</strong>
+              <a href="https://wa.me/524621059586" target="_blank" rel="noopener">+52 462 105 9586</a>
+            </div>
+            <div class="divider"></div>
+            <p class="muted small">
+              Incluye el masaje, la fecha y la hora que prefieres al enviar tu mensaje.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+      <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; <span id="year"></span> Life Skin Care Irapuato. All rights reserved.</p>
+      <div class="footer__links">
+        <a href="#masajes">Masajes</a>
+        <a href="#contact">Reserva</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const cards = Array.from(document.querySelectorAll("[data-accordion]"));
+
+      const setOpenState = (card, open) => {
+        const trigger = card.querySelector(".service-card__toggle");
+        const panel = card.querySelector(".service-card__panel");
+
+        card.classList.toggle("is-open", open);
+        trigger.setAttribute("aria-expanded", open ? "true" : "false");
+        panel.hidden = !open;
+      };
+
+      cards.forEach((card, index) => {
+        const trigger = card.querySelector(".service-card__toggle");
+        setOpenState(card, index === 0);
+
+        trigger.addEventListener("click", () => {
+          const isOpen = trigger.getAttribute("aria-expanded") === "true";
+
+          cards.forEach((item) => setOpenState(item, false));
+          if (!isOpen) setOpenState(card, true);
+        });
+      });
+
+      const year = document.getElementById("year");
+      if (year) year.textContent = String(new Date().getFullYear());
+    });
+  </script>
+</body>
+</html>
