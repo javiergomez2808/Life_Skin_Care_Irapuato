@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --brown-950: #2f1b15;
   --brown-900: #4a2d24;
   --brown-700: #6b4336;
@@ -467,7 +467,7 @@ img { max-width: 100%; display: block; }
 
 .carousel {
   position: relative;
-  width: 200%;
+  width: 100%;
   max-width: 1080px;
   margin: 0 auto;
   border-radius: var(--radius-lg);
@@ -579,15 +579,54 @@ img { max-width: 100%; display: block; }
 }
 
 @media (max-width: 640px) {
-  .section { padding: 62px 0; }
-  .container { width: min(var(--max), calc(100% - 26px)); }
-  .services-grid { grid-template-columns: 1fr; }
-  .carousel__slide img { height: 300px; }
+  /* Layout */
+  .section { padding: 44px 0; }
+  .container { width: min(var(--max), calc(100% - 20px)); }
+
+  /* Topbar: compact + hide text nav links */
+  .topbar__inner { padding: 10px 0; gap: 10px; }
+  .brand__text { font-size: 0.9rem; }
+  .nav { gap: 8px; }
+  .nav a:not(.btn--sm) { display: none; }
+  .btn--sm { padding: 9px 12px; font-size: 0.88rem; }
+  .language-select { padding: 8px 8px; font-size: 0.82rem; }
+
+  /* Hero */
+  .hero { padding: 48px 0 16px; }
+  .hero h1 { font-size: clamp(1.7rem, 1.1rem + 3vw, 2.4rem); }
+  .pill { font-size: 0.82rem; padding: 6px 10px; }
+  .lead { font-size: 0.97rem; }
+  .hero__actions { gap: 8px; }
+  .hero__actions .btn { padding: 11px 14px; font-size: 0.92rem; }
+  .hero__stats { gap: 8px; }
+  .stat { padding: 10px 12px; }
+
+  /* Services grid */
+  .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  .service-card__media { min-height: 110px; }
+  .service-card h3 { font-size: 0.9rem; }
+
+  /* Carousels */
+  .carousel__slide img { height: auto; }
   .carousel--hero .carousel__slide img { height: 100%; }
+  .carousel__btn { width: 34px; height: 34px; font-size: 1.1rem; }
+
+  /* Reviews */
   .carousel--reviews .carousel__slide {
-    min-height: 220px;
-    padding: 28px 38px;
+    min-height: 160px;
+    padding: 22px 24px;
   }
+  .review-slide p { font-size: 0.96rem; }
+  .review-slide h3 { font-size: 0.88rem; margin-top: 10px; }
+
+  /* About / hours */
+  .highlight { padding: 12px; }
+  .hours { padding: 14px; }
+}
+
+@media (max-width: 400px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .hero__stats { flex-direction: column; align-items: flex-start; }
 }
 
 @media (prefers-reduced-motion: reduce) {
