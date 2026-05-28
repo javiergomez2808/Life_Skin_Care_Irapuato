@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
       htmlLang: "es",
       title: "Depilación y Estética | Life Skin Care Irapuato",
       description:
-        "Depilación láser Soprano Titanium, antiaging, eliminación de tatuajes y verrugas en Life Skin Care Irapuato.",
+        "Depilación láser Soprano Titanium en Life Skin Care Irapuato. Tecnología avanzada, resultados visibles y duraderos para tu piel.",
       reserveNav: "Reserva",
       selectEs: "Español",
       heroPill: "Estética Avanzada",
@@ -40,59 +40,13 @@ document.addEventListener("DOMContentLoaded", () => {
           ],
           note: "\"Tecnología que cuida tu piel, resultados que enamoran.\""
         },
-        {
-          eyebrow: "Antiaging",
-          title: "Juventud y vitalidad para tu piel",
-          summary:
-            "Tratamiento especializado para restaurar firmeza y luminosidad.",
-          description:
-            "El tratamiento antiaging combate los signos visibles del envejecimiento mediante técnicas avanzadas y activos especializados que estimulan la regeneración celular.",
-          list: [
-            "Reduce líneas de expresión y arrugas.",
-            "Mejora firmeza y elasticidad.",
-            "Favorece luminosidad y uniformidad.",
-            "Estimula producción natural de colágeno.",
-            "Brinda frescura y bienestar inmediato."
-          ],
-          note: "Un ritual de belleza diseñado para devolver juventud y resplandor natural."
-        },
-        {
-          eyebrow: "Eliminación de Tatuajes",
-          title: "Tecnología láser para una piel renovada",
-          summary:
-            "Procedimiento seguro y eficaz para eliminar pigmentos progresivamente.",
-          description:
-            "Utilizamos tecnología láser avanzada para fragmentar las partículas de tinta y permitir que el organismo las elimine de forma natural.",
-          list: [
-            "Reducción progresiva y visible del tatuaje.",
-            "Procedimiento seguro y mínimamente invasivo.",
-            "Adaptable a distintos tipos de piel y pigmentos.",
-            "Ideal para eliminar o atenuar tatuajes."
-          ],
-          note: "Profesionalismo y cuidado para recuperar la naturalidad de tu piel."
-        },
-        {
-          eyebrow: "Eliminación de Verrugas",
-          title: "Precisión, seguridad y cuidado estético",
-          summary:
-            "Tecnología Plamapen para remover lesiones cutáneas sin cirugía.",
-          description:
-            "El tratamiento con Plamapen utiliza energía de plasma para eliminar verrugas y pequeñas imperfecciones de forma precisa y segura.",
-          list: [
-            "Procedimiento no invasivo y controlado.",
-            "Mínima cicatrización y rápida recuperación.",
-            "Resultados estéticos y efectivos.",
-            "Mejora apariencia y salud de la piel."
-          ],
-          note: "Una solución moderna y confiable para el cuidado estético de tu piel."
-        }
       ]
     },
     en: {
       htmlLang: "en",
       title: "Hair Removal & Aesthetics | Life Skin Care Irapuato",
       description:
-        "Soprano Titanium laser hair removal, antiaging, tattoo and wart removal at Life Skin Care Irapuato.",
+        "Soprano Titanium laser hair removal at Life Skin Care Irapuato. Advanced technology with visible and long-lasting results.",
       reserveNav: "Book",
       selectEs: "Spanish",
       heroPill: "Advanced Aesthetics",
@@ -128,52 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
           ],
           note: "\"Technology that cares for your skin, results you'll love.\""
         },
-        {
-          eyebrow: "Antiaging",
-          title: "Youth and vitality for your skin",
-          summary:
-            "A specialized treatment to restore firmness and radiance.",
-          description:
-            "The antiaging treatment combats visible signs of aging through advanced techniques and specialized active ingredients that stimulate cell regeneration.",
-          list: [
-            "Reduces expression lines and wrinkles.",
-            "Improves firmness and elasticity.",
-            "Enhances radiance and skin evenness.",
-            "Stimulates natural collagen production.",
-            "Provides immediate freshness and wellbeing."
-          ],
-          note: "A beauty ritual designed to restore youth and natural glow."
-        },
-        {
-          eyebrow: "Tattoo Removal",
-          title: "Laser technology for renewed skin",
-          summary:
-            "A safe and effective procedure to progressively eliminate pigments.",
-          description:
-            "We use advanced laser technology to fragment ink particles and allow the body to eliminate them naturally.",
-          list: [
-            "Progressive and visible tattoo reduction.",
-            "Safe and minimally invasive procedure.",
-            "Adaptable to different skin types and pigments.",
-            "Ideal for eliminating or fading tattoos."
-          ],
-          note: "Professionalism and care to restore the natural look of your skin."
-        },
-        {
-          eyebrow: "Wart Removal",
-          title: "Precision, safety and aesthetic care",
-          summary:
-            "Plamapen technology to remove skin lesions without surgery.",
-          description:
-            "The Plamapen treatment uses plasma energy to precisely and safely remove warts and small skin imperfections.",
-          list: [
-            "Non-invasive and controlled procedure.",
-            "Minimal scarring and fast recovery.",
-            "Effective and aesthetically pleasing results.",
-            "Improves the appearance and health of the skin."
-          ],
-          note: "A modern and reliable solution for the aesthetic care of your skin."
-        }
       ]
     }
   };
