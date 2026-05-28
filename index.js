@@ -6,7 +6,7 @@ const i18n = {
       "Life Skin Care Irapuato ofrece masajes, faciales, tratamientos corporales y paquetes en un ambiente en calma y moderno.",
     nav_services: "Servicios",
     nav_about: "Acerca de Nosotros",
-    nav_reviews: "Reseñas",
+    nav_reviews: "Resenas",
     nav_book: "Reserva",
     nav_cursos: "Cursos",
     language_label: "Selector de idioma",
@@ -25,7 +25,9 @@ const i18n = {
     service_masajes: "Masajes",
     service_corporales: "Corporales",
     service_faciales: "Faciales",
-    service_depilacion: "Depilacion E-Light",
+    service_depilacion: "Depilación Láser Soprano Titanium",
+    service_otrosservicios: "Otros Servicios",
+    service_tatuajes: "Eliminación de Tatuajes",
     service_aparatologia: "Aparatologia",
     service_anticelulitico: "Anticelulitico",
     service_cursos: "Cursos",
@@ -49,13 +51,13 @@ const i18n = {
     hours_sat: "Sabados",
     hours_sun: "Domingos",
     hours_closed: "Cerrado",
-    reviews_title: "Reseñas",
+    reviews_title: "Resenas",
     reviews_subtitle:
       "Lo que dicen nuestros clientes sobre su experiencia en Life Skin Care Irapuato.",
-    reviews_aria: "Reseñas de clientes",
-    review_prev: "Reseña anterior",
-    review_next: "Siguiente reseña",
-    review_dots: "Seleccionar reseña",
+    reviews_aria: "Resenas de clientes",
+    review_prev: "Resena anterior",
+    review_next: "Siguiente resena",
+    review_dots: "Seleccionar resena",
     contact_title: "Reserva con nosotros",
     contact_text:
       "Para programar una cita, pongase en contacto con nosotros directamente. Estaremos encantados de ayudarle y confirmar la disponibilidad.",
@@ -91,7 +93,9 @@ const i18n = {
     service_masajes: "Massages",
     service_corporales: "Body Treatments",
     service_faciales: "Facials",
-    service_depilacion: "E-Light Hair Removal",
+    service_depilacion: "Soprano Titanium Laser",
+    service_otrosservicios: "Other Services",
+    service_tatuajes: "Tattoo Removal",
     service_aparatologia: "Aesthetic Devices",
     service_anticelulitico: "Anti-Cellulite",
     service_cursos: "Courses",
@@ -172,6 +176,8 @@ function applyLanguage(lang) {
   setText('.service-card[href="./Servicios/Corporales.html"] h3', t.service_corporales);
   setText('.service-card[href="./Servicios/Faciales.html"] h3', t.service_faciales);
   setText('.service-card[href="./Servicios/Depilacion.html"] h3', t.service_depilacion);
+  setText('.service-card[href="./Servicios/OtrosServicios.html"] h3', t.service_otrosservicios);
+  setText('.service-card[href="./Servicios/Tatuajes.html"] h3', t.service_tatuajes);
   setText('.service-card[href="./Servicios/Aparatos.html"] h3', t.service_aparatologia);
   setText('.service-card[href="./Servicios/Anticelulitico.html"] h3', t.service_anticelulitico);
   setText('.service-card[href="./Servicios/Cursos.html"] h3', t.service_cursos);
