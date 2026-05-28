@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
       htmlLang: "es",
       title: "Faciales y Estética | Life Skin Care Irapuato",
       description:
-        "Limpiezas faciales, faciales con aparatología, depilación láser y tratamientos antiaging en Life Skin Care Irapuato.",
+        "Limpiezas faciales, faciales con aparatología, tratamientos antiaging, para acné, despigmentante e hidratación en Life Skin Care Irapuato.",
       reserveNav: "Reserva",
       selectEs: "Español",
       heroPill: "Cuidado Facial y Estético",
@@ -75,21 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
             "La unión perfecta entre ciencia y estética para transformar tu piel y realzar tu belleza natural."
         },
         {
-          eyebrow: "Depilación Láser",
-          title: "Soprano Titanium",
-          summary: "Belleza sin límites, confianza sin dolor.",
-          summaryExtra: "La depilación láser más avanzada, rápida y segura para una piel suave y radiante.",
-          description:
-            "Soprano Titanium transmite innovación y bienestar mediante una experiencia de depilación láser cómoda, avanzada y segura.",
-          list: [
-            "Tecnología que cuida tu piel, resultados que enamoran.",
-            "Depilación láser sin dolor, solo libertad.",
-            "Tu piel merece lo mejor."
-          ],
-          note:
-            "Ideal para quienes buscan suavidad, confianza y resultados estéticos con tecnología de alta precisión."
-        },
-        {
           eyebrow: "Antiaging",
           title: "Juventud y vitalidad para tu piel",
           summary:
@@ -112,6 +97,51 @@ document.addEventListener("DOMContentLoaded", () => {
           ],
           note:
             "Un ritual de belleza y cuidado integral pensado para devolverle a tu piel su juventud y resplandor natural."
+        },
+        {
+          eyebrow: "Tratamiento Facial para Acné",
+          title: "Purifica y renueva tu piel",
+          summary: "Diseñado para pieles con imperfecciones, brotes y exceso de grasa.",
+          description:
+            "Purifica y renueva tu piel con nuestro tratamiento facial especializado para acné. Diseñado para pieles con imperfecciones, brotes y exceso de grasa, este procedimiento ayuda a limpiar profundamente los poros, controlar la producción de sebo y disminuir la inflamación causada por el acné. Ideal para adolescentes y adultos que buscan una piel más limpia, uniforme y saludable.",
+          list: [
+            "Limpieza profunda y desintoxicación facial.",
+            "Ayuda a reducir puntos negros y brotes activos.",
+            "Controla el exceso de grasa y brillo facial.",
+            "Favorece la regeneración y recuperación de la piel."
+          ],
+          note:
+            "En nuestro spa utilizamos productos especializados y técnicas suaves que ayudan a mejorar la apariencia de la piel sin irritarla, brindando una experiencia relajante y efectiva."
+        },
+        {
+          eyebrow: "Tratamiento Facial Despigmentante",
+          title: "Luminosidad y uniformidad para tu piel",
+          summary: "Reduce manchas y mejora el tono y textura de la piel.",
+          description:
+            "Devuelve luminosidad y uniformidad a tu piel con nuestro tratamiento despigmentante facial. Este procedimiento está diseñado para disminuir manchas ocasionadas por el sol, acné, edad o cambios hormonales, ayudando a mejorar el tono y textura de la piel. Ideal para quienes desean una piel más uniforme, radiante y rejuvenecida.",
+          list: [
+            "Ayuda a reducir manchas y marcas visibles.",
+            "Unifica el tono de la piel de manera progresiva.",
+            "Aporta luminosidad y frescura al rostro.",
+            "Favorece una apariencia más joven y saludable."
+          ],
+          note:
+            "Cada sesión combina ingredientes despigmentantes y técnicas profesionales que ayudan a revitalizar la piel mientras disfrutas de un momento de relajación y bienestar."
+        },
+        {
+          eyebrow: "Tratamiento Facial de Hidratación",
+          title: "Suavidad, elasticidad y frescura",
+          summary: "Hidratación profunda para pieles secas, deshidratadas o apagadas.",
+          description:
+            "Recupera la suavidad, elasticidad y frescura de tu piel con nuestro tratamiento facial de hidratación profunda. Diseñado para pieles secas, deshidratadas o apagadas, este facial ayuda a restaurar la humedad natural del rostro y proteger la barrera cutánea. Ideal para quienes buscan una piel más luminosa, suave y revitalizada.",
+          list: [
+            "Hidratación profunda y nutrición facial.",
+            "Mejora la elasticidad y suavidad de la piel.",
+            "Ayuda a reducir la sensación de resequedad y tirantez.",
+            "Aporta luminosidad y apariencia saludable al rostro."
+          ],
+          note:
+            "En cada sesión utilizamos productos hidratantes de alta calidad y técnicas relajantes que brindan bienestar mientras tu piel recupera su equilibrio natural."
         }
       ]
     },
@@ -119,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
       htmlLang: "en",
       title: "Facials & Aesthetics | Life Skin Care Irapuato",
       description:
-        "Professional facials, device-assisted treatments, laser hair removal and antiaging treatments at Life Skin Care Irapuato.",
+        "Professional facials, device-assisted treatments, antiaging, acne, depigmentation and hydration treatments at Life Skin Care Irapuato.",
       reserveNav: "Book",
       selectEs: "Spanish",
       heroPill: "Facial & Aesthetic Care",
@@ -190,21 +220,6 @@ document.addEventListener("DOMContentLoaded", () => {
             "The perfect union of science and aesthetics to transform your skin and enhance your natural beauty."
         },
         {
-          eyebrow: "Laser Hair Removal",
-          title: "Soprano Titanium",
-          summary: "Beauty without limits, confidence without pain.",
-          summaryExtra: "The most advanced, fast and safe laser hair removal for smooth, radiant skin.",
-          description:
-            "Soprano Titanium delivers innovation and wellbeing through a comfortable, advanced and safe laser hair removal experience.",
-          list: [
-            "Technology that cares for your skin, results you'll love.",
-            "Pain-free laser hair removal, pure freedom.",
-            "Your skin deserves the best."
-          ],
-          note:
-            "Ideal for those seeking smoothness, confidence and aesthetic results with high-precision technology."
-        },
-        {
           eyebrow: "Antiaging",
           title: "Youth and vitality for your skin",
           summary:
@@ -227,6 +242,51 @@ document.addEventListener("DOMContentLoaded", () => {
           ],
           note:
             "A comprehensive beauty and care ritual designed to restore your skin's youth and natural glow."
+        },
+        {
+          eyebrow: "Facial Treatment for Acne",
+          title: "Purify and renew your skin",
+          summary: "Designed for skin with blemishes, breakouts and excess oil.",
+          description:
+            "Purify and renew your skin with our specialized facial treatment for acne. Designed for skin with blemishes, breakouts and excess oil, this procedure helps deeply cleanse pores, control sebum production and reduce inflammation caused by acne. Ideal for teens and adults looking for cleaner, more even and healthier skin.",
+          list: [
+            "Deep cleansing and facial detoxification.",
+            "Helps reduce blackheads and active breakouts.",
+            "Controls excess oil and facial shine.",
+            "Promotes skin regeneration and recovery."
+          ],
+          note:
+            "In our spa we use specialized products and gentle techniques that help improve skin appearance without irritating it, providing a relaxing and effective experience."
+        },
+        {
+          eyebrow: "Depigmentation Facial Treatment",
+          title: "Radiance and evenness for your skin",
+          summary: "Reduces spots and improves skin tone and texture.",
+          description:
+            "Restore radiance and evenness to your skin with our facial depigmentation treatment. This procedure is designed to diminish spots caused by sun exposure, acne, age or hormonal changes, helping to improve skin tone and texture. Ideal for those who want more uniform, radiant and rejuvenated skin.",
+          list: [
+            "Helps reduce visible spots and marks.",
+            "Progressively evens out skin tone.",
+            "Brings radiance and freshness to the face.",
+            "Promotes a younger and healthier appearance."
+          ],
+          note:
+            "Each session combines depigmenting ingredients and professional techniques that help revitalize skin while you enjoy a moment of relaxation and wellbeing."
+        },
+        {
+          eyebrow: "Facial Hydration Treatment",
+          title: "Softness, elasticity and freshness",
+          summary: "Deep hydration for dry, dehydrated or dull skin.",
+          description:
+            "Restore the softness, elasticity and freshness of your skin with our deep facial hydration treatment. Designed for dry, dehydrated or dull skin, this facial helps restore the natural moisture of the face and protect the skin barrier. Ideal for those seeking more luminous, soft and revitalized skin.",
+          list: [
+            "Deep hydration and facial nourishment.",
+            "Improves skin elasticity and softness.",
+            "Helps reduce the feeling of dryness and tightness.",
+            "Brings radiance and a healthy appearance to the face."
+          ],
+          note:
+            "In each session we use high-quality moisturizing products and relaxing techniques that provide wellbeing while your skin recovers its natural balance."
         }
       ]
     }
