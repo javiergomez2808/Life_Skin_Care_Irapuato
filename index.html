@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -159,11 +159,20 @@
           </a>
           <a class="service-card reveal" href="./Servicios/Depilacion.html">
             <div class="service-card__media" style="background-image: url('./images/Depilacion/Depilacion.png');"></div>
-            <h3>Depilacion y Tecnología</h3>
+            <h3>Depilación Láser Soprano Titanium</h3>
+          </a>
+          <a class="service-card reveal" href="./Servicios/OtrosServicios.html">
+            <div class="service-card__media" style="background-image: url('./images/Otros_Servicios/Verrugas.png');"></div>
+            <h3>Otros Servicios</h3>
+          </a>
+          <a class="service-card reveal" href="./Servicios/Tatuajes.html">
+            <div class="service-card__media" style="background-image: url('./images/Depilacion/Tatuajes.png');"></div>
+            <h3>Eliminación de Tatuajes</h3>
           </a>
         </div>
       </div>
     </section>
+
 
     <!-- Cursos -->
     <section id="cursos" class="section section--dark">
@@ -186,7 +195,7 @@
                 aria-label="Espacio en blanco para imagen del curso 1"
               >
                 <a href="./Servicios/Cursos.html">
-                 <img src="./images/1.png" alt="Description of image">
+                 <img src="./images/Cursos/Drenaje 19.jpeg" alt="Description of image">
                 </a>              
               </div>
             </div>
@@ -196,7 +205,7 @@
                 aria-label="Espacio en blanco para imagen del curso 2"
               >
                 <a href="./Servicios/Cursos.html">
-                 <img src="./images/1.png" alt="Description of image">
+                 <img src="./images/Cursos/Masje 19-20.jpeg" alt="Description of image">
                 </a>
               </div>
             </div>
@@ -206,7 +215,7 @@
                 aria-label="Espacio en blanco para imagen del curso 3"
               >
                 <a href="./Servicios/Cursos.html">
-                 <img src="./images/1.png" alt="Description of image">
+                 <img src="./images/Cursos/Masaje Profesional.jpeg" alt="Description of image">
                 </a>              
               </div>
             </div>
@@ -274,7 +283,7 @@
           <p class="muted">Lo que dicen nuestros clientes sobre su experiencia en Life Skin Care Irapuato.</p>
         </div>
 
-        <div class="carousel carousel--reviews" data-carousel aria-label="Reseñas de clientes">
+        <div class="carousel carousel--reviews" data-carousel aria-label="Resenas de clientes">
           <div class="carousel__track">
             <article class="carousel__slide review-slide">
               <p>"Excelente atencion y super profesional. Sali completamente relajada."</p>
@@ -461,6 +470,20 @@
       }
 
       document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Accordion for Eliminación de Tatuajes
+      const tattooCard = document.querySelector('#tatuajes [data-accordion]');
+      if (tattooCard) {
+        const trigger = tattooCard.querySelector('.service-card__toggle');
+        const panel = tattooCard.querySelector('.tattoo-panel');
+        const icon = tattooCard.querySelector('.tattoo-icon');
+        trigger.addEventListener('click', () => {
+          const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+          trigger.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+          panel.hidden = isOpen;
+          if (icon) icon.style.transform = isOpen ? '' : 'rotate(45deg)';
+        });
+      }
     });
   </script>
   
