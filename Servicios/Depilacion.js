@@ -38,6 +38,14 @@ document.addEventListener("DOMContentLoaded", () => {
             "Resultados visibles y duraderos.",
             "Ideal para diferentes tipos de piel."
           ],
+          priceList: [
+            "Rostro: $500 | Bozo: $200 | Axilas: $500",
+            "Brazo: $650 | Bikini: $500 | Brasileño: $650",
+            "Pierna Completa: $1,300 | Media Pierna: $650",
+            "Intergluteo: $650 | Gluteo: $750",
+            "Espalda: $600 – $800 | Pecho: $600 – $750"
+          ],
+          priceNote: "Precio por sesión. Pregunta por paquetes con descuento.",
           note: "\"Tecnología que cuida tu piel, resultados que enamoran.\""
         },
       ]
@@ -80,6 +88,14 @@ document.addEventListener("DOMContentLoaded", () => {
             "Visible and long-lasting results.",
             "Suitable for different skin types."
           ],
+          priceList: [
+            "Face: $500 | Upper lip: $200 | Underarms: $500",
+            "Arm: $650 | Bikini: $500 | Brazilian: $650",
+            "Full leg: $1,300 | Half leg: $650",
+            "Intergluteal: $650 | Glutes: $750",
+            "Back: $600 – $800 | Chest: $600 – $750"
+          ],
+          priceNote: "Price per session. Ask about discounted packages.",
           note: "\"Technology that cares for your skin, results you'll love.\""
         },
       ]
@@ -104,10 +120,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const eyebrow = card.querySelector(".service-card__eyebrow");
     const title = card.querySelector(".service-card__summary h3");
     const summaryParagraphs = card.querySelectorAll(".service-card__summary p");
-    const detailParagraphs = card.querySelectorAll(".service-card__panel p:not(.small)");
-    const note = card.querySelector(".service-card__panel .muted.small");
-    const list = card.querySelector(".checklist");
+    const detailParagraphs = card.querySelectorAll(".service-card__panel p:not(.small):not(.price-note)");
+    const notes = card.querySelectorAll(".service-card__panel .muted.small");
+    const lists = card.querySelectorAll(".checklist");
     const hintLabel = card.querySelector(".service-card__hint span");
+    const priceNote = card.querySelector(".price-note");
 
     if (eyebrow) eyebrow.textContent = cardTranslations.eyebrow;
     if (title) title.textContent = cardTranslations.title;
@@ -117,15 +134,25 @@ document.addEventListener("DOMContentLoaded", () => {
     if (hintLabel) hintLabel.textContent = content.cardHint;
 
     if (detailParagraphs[0]) detailParagraphs[0].textContent = cardTranslations.description;
+    if (detailParagraphs[1]) detailParagraphs[1].innerHTML = `<strong>${content.lang === "en" ? "Prices per zone (per session)" : "Precios por zona (por sesión)"}</strong>`;
 
-    if (list && cardTranslations.list) {
-      const items = list.querySelectorAll("li");
+    if (lists[0] && cardTranslations.list) {
+      const items = lists[0].querySelectorAll("li");
       items.forEach((item, index) => {
         if (cardTranslations.list[index]) item.textContent = cardTranslations.list[index];
       });
     }
 
-    if (note) note.textContent = cardTranslations.note;
+    if (lists[1] && cardTranslations.priceList) {
+      const items = lists[1].querySelectorAll("li");
+      items.forEach((item, index) => {
+        if (cardTranslations.priceList[index]) item.textContent = cardTranslations.priceList[index];
+      });
+    }
+
+    if (priceNote) priceNote.textContent = cardTranslations.priceNote;
+    if (notes[1]) notes[1].textContent = cardTranslations.note;
+    else if (notes[0]) notes[0].textContent = cardTranslations.note;
   }
 
   function applyTranslations(lang) {
