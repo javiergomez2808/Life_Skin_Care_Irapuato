@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "La danza sanadora de Hawái",
           summary:
             "Movimientos largos y envolventes para liberar bloqueos físicos y emocionales.",
-          price: "Precio desde $600.00 MXN",
+          price: "Precio desde $700.00 MXN",
           duration: "Duración: 45 minutos",
           description:
             "Técnica tradicional de Hawái caracterizada por movimientos largos y fluidos que relajan el cuerpo y la mente.",
@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "Equilibrio integral y renovación",
           summary:
             "Masaje con enfoque holístico para armonizar cuerpo, mente y energía.",
-          price: "Precio desde $600.00 MXN",
+          price: "Precio desde $750.00 MXN",
           duration: "Duración: 45 minutos",
           description:
             "El masaje Ayurveda utiliza aceites y maniobras fluidas para apoyar el equilibrio integral del cuerpo y promover una relajación profunda.",
@@ -364,7 +364,7 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "The healing dance of Hawaii",
           summary:
             "Long, enveloping movements to release physical and emotional blockages.",
-          price: "Price from $600.00 MXN",
+          price: "Price from $700.00 MXN",
           duration: "Duration: 45 minutes",
           description:
             "A traditional Hawaiian technique characterized by long, flowing movements that relax the body and mind.",
@@ -454,7 +454,7 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "Holistic balance and renewal",
           summary:
             "A holistic massage to harmonize body, mind and energy.",
-          price: "Price from $600.00 MXN",
+          price: "Price from $750.00 MXN",
           duration: "Duration: 45 minutes",
           description:
             "Ayurveda massage uses oils and flowing maneuvers to support the body's overall balance and promote deep relaxation.",
