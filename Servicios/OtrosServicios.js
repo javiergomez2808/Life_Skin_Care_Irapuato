@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
           eyebrow: "Eliminación de Verrugas",
           title: "Precisión, seguridad y cuidado estético",
           summary: "Tecnología Plamapen para remover lesiones cutáneas sin cirugía.",
+          price: "Precio según tamaño y ubicación",
           description:
             "El tratamiento con Plamapen utiliza energía de plasma para eliminar verrugas y pequeñas imperfecciones de forma precisa y segura.",
           list: [
@@ -37,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "Resultados estéticos y efectivos.",
             "Mejora apariencia y salud de la piel."
           ],
+          priceDisclaimer: "ⓘ El precio puede variar según el tamaño y la ubicación de la verruga. Se recomienda una valoración previa antes de iniciar el tratamiento.",
           note: "Una solución moderna y confiable para el cuidado estético de tu piel."
         }
       ]
@@ -70,6 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
           eyebrow: "Wart Removal",
           title: "Precision, safety and aesthetic care",
           summary: "Plamapen technology to remove skin lesions without surgery.",
+          price: "Price based on size and location",
           description:
             "The Plamapen treatment uses plasma energy to precisely and safely remove warts and small skin imperfections.",
           list: [
@@ -78,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
             "Effective and aesthetically pleasing results.",
             "Improves the appearance and health of the skin."
           ],
+          priceDisclaimer: "ⓘ Price may vary based on the size and location of the wart. A prior assessment is recommended before starting the treatment.",
           note: "A modern and reliable solution for the aesthetic care of your skin."
         }
       ]
@@ -103,13 +107,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const title = card.querySelector(".service-card__summary h3");
     const summaryParagraphs = card.querySelectorAll(".service-card__summary p");
     const detailParagraphs = card.querySelectorAll(".service-card__panel p:not(.small)");
-    const note = card.querySelector(".service-card__panel .muted.small");
+    const priceDisclaimer = card.querySelector(".service-card__panel .price-disclaimer");
+    const note = card.querySelector(".service-card__panel .muted.small:not(.price-disclaimer)");
     const list = card.querySelector(".checklist");
     const hintLabel = card.querySelector(".service-card__hint span");
 
     if (eyebrow) eyebrow.textContent = cardTranslations.eyebrow;
     if (title) title.textContent = cardTranslations.title;
     if (summaryParagraphs[0]) summaryParagraphs[0].textContent = cardTranslations.summary;
+    if (cardTranslations.price && summaryParagraphs[1])
+      summaryParagraphs[1].textContent = cardTranslations.price;
     if (hintLabel) hintLabel.textContent = content.cardHint;
 
     if (detailParagraphs[0]) detailParagraphs[0].textContent = cardTranslations.description;
@@ -121,6 +128,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
+    if (priceDisclaimer && cardTranslations.priceDisclaimer)
+      priceDisclaimer.textContent = cardTranslations.priceDisclaimer;
     if (note) note.textContent = cardTranslations.note;
   }
 
