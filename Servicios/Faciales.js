@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "Pureza, frescura y cuidado para tu piel",
           summary:
             "Tratamiento esencial para mantener la piel sana, luminosa y libre de impurezas.",
+          price: "Precio desde $450.00 MXN",
           description:
             "La limpieza facial profesional elimina células muertas, exceso de grasa y contaminantes, preparando la piel para absorber mejor nutrientes y tratamientos posteriores.",
           consistList: [
@@ -56,6 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "Tecnología avanzada para una piel radiante",
           summary:
             "Equipos especializados que potencian limpieza, hidratación y rejuvenecimiento.",
+          price: "Precio desde $500.00 MXN",
           description:
             "Los faciales con aparatología combinan técnicas profesionales con tecnología de vanguardia para ofrecer soluciones personalizadas según cada tipo de piel.",
           consistList: [
@@ -79,6 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "Juventud y vitalidad para tu piel",
           summary:
             "Tratamiento diseñado para combatir signos visibles del envejecimiento.",
+          price: "Precio desde $2,300.00 MXN",
           description:
             "El tratamiento antiaging ayuda a restaurar la firmeza, mejorar la luminosidad y estimular la regeneración celular mediante técnicas avanzadas y productos especializados.",
           consistList: [
@@ -102,6 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
           eyebrow: "Tratamiento Facial para Acné",
           title: "Purifica y renueva tu piel",
           summary: "Diseñado para pieles con imperfecciones, brotes y exceso de grasa.",
+          price: "Precio desde $500.00 MXN",
           description:
             "Purifica y renueva tu piel con nuestro tratamiento facial especializado para acné. Diseñado para pieles con imperfecciones, brotes y exceso de grasa, este procedimiento ayuda a limpiar profundamente los poros, controlar la producción de sebo y disminuir la inflamación causada por el acné. Ideal para adolescentes y adultos que buscan una piel más limpia, uniforme y saludable.",
           list: [
@@ -132,6 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
           eyebrow: "Tratamiento Facial de Hidratación",
           title: "Suavidad, elasticidad y frescura",
           summary: "Hidratación profunda para pieles secas, deshidratadas o apagadas.",
+          price: "Precio desde $500.00 MXN",
           description:
             "Recupera la suavidad, elasticidad y frescura de tu piel con nuestro tratamiento facial de hidratación profunda. Diseñado para pieles secas, deshidratadas o apagadas, este facial ayuda a restaurar la humedad natural del rostro y proteger la barrera cutánea. Ideal para quienes buscan una piel más luminosa, suave y revitalizada.",
           list: [
@@ -177,6 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "Purity, freshness and care for your skin",
           summary:
             "An essential treatment to keep skin healthy, radiant and free of impurities.",
+          price: "Price from $450.00 MXN",
           description:
             "Professional facial cleansing removes dead cells, excess oil and contaminants, preparing the skin to better absorb nutrients and subsequent treatments.",
           consistList: [
@@ -201,6 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "Advanced technology for radiant skin",
           summary:
             "Specialized equipment that enhances cleansing, hydration and rejuvenation.",
+          price: "Price from $500.00 MXN",
           description:
             "Device-assisted facials combine professional techniques with cutting-edge technology to offer personalized solutions for each skin type.",
           consistList: [
@@ -224,6 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "Youth and vitality for your skin",
           summary:
             "A treatment designed to combat visible signs of aging.",
+          price: "Price from $2,300.00 MXN",
           description:
             "The antiaging treatment helps restore firmness, improve radiance and stimulate cell regeneration through advanced techniques and specialized products.",
           consistList: [
@@ -247,6 +255,7 @@ document.addEventListener("DOMContentLoaded", () => {
           eyebrow: "Facial Treatment for Acne",
           title: "Purify and renew your skin",
           summary: "Designed for skin with blemishes, breakouts and excess oil.",
+          price: "Price from $500.00 MXN",
           description:
             "Purify and renew your skin with our specialized facial treatment for acne. Designed for skin with blemishes, breakouts and excess oil, this procedure helps deeply cleanse pores, control sebum production and reduce inflammation caused by acne. Ideal for teens and adults looking for cleaner, more even and healthier skin.",
           list: [
@@ -277,6 +286,7 @@ document.addEventListener("DOMContentLoaded", () => {
           eyebrow: "Facial Hydration Treatment",
           title: "Softness, elasticity and freshness",
           summary: "Deep hydration for dry, dehydrated or dull skin.",
+          price: "Price from $500.00 MXN",
           description:
             "Restore the softness, elasticity and freshness of your skin with our deep facial hydration treatment. Designed for dry, dehydrated or dull skin, this facial helps restore the natural moisture of the face and protect the skin barrier. Ideal for those seeking more luminous, soft and revitalized skin.",
           list: [
@@ -325,8 +335,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (eyebrow) eyebrow.textContent = cardTranslations.eyebrow;
     if (title) title.textContent = cardTranslations.title;
     if (summaryParagraphs[0]) summaryParagraphs[0].textContent = cardTranslations.summary;
-    if (cardTranslations.summaryExtra && summaryParagraphs[1])
-      summaryParagraphs[1].textContent = cardTranslations.summaryExtra;
+    if (cardTranslations.price && summaryParagraphs[1])
+      summaryParagraphs[1].textContent = cardTranslations.price;
+    if (cardTranslations.summaryExtra && summaryParagraphs[2])
+      summaryParagraphs[2].textContent = cardTranslations.summaryExtra;
     if (hintLabel) hintLabel.textContent = content.cardHint;
 
     if (detailParagraphs[0]) detailParagraphs[0].textContent = cardTranslations.description;
