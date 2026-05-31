@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       contactTitle: "Reserva con nosotros",
       contactText:
         "Para programar una cita, contáctanos directamente y confirma disponibilidad.",
-      contactHint:
+      contactHint: 
         "Incluye el tratamiento, la fecha y la hora que prefieres al enviar tu mensaje.",
       footerText: "Life Skin Care Irapuato. Todos los derechos reservados.",
       footerMassages: "Corporales",
@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "Moldea tu figura y revitaliza tu cuerpo",
           summary:
             "Tratamiento integral para reducir medidas, mejorar la textura de la piel y favorecer la eliminación de toxinas.",
+          price: "Precio desde $3,000.00 MXN",
           description:
             "Este tratamiento combina técnicas manuales y aparatología avanzada para lograr una reducción efectiva de medidas, mejorar la textura de la piel y favorecer la eliminación de toxinas. En Life Skin Care Irapuato lo ofrecemos como una experiencia completa que une tradición, innovación y bienestar.",
           consistList: [
@@ -100,6 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "Recuperación segura y bienestar integral",
           summary:
             "Tratamientos especializados para acompañar la recuperación después de una cirugía estética o médica.",
+          price: "Precio desde $5,000.00 MXN",
           description:
             "Los tratamientos postquirúrgicos están diseñados para acompañar el proceso de recuperación después de una cirugía estética o médica. En Life Skin Care Irapuato aplicamos técnicas especializadas y en base a las indicaciones médicas que favorecen la pronta recuperación, la cicatrización, reducen la inflamación y ayudan al cuerpo a recuperar su equilibrio de manera más rápida y cómoda.",
           consistList: [
@@ -152,6 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
           eyebrow: "Body Contouring Treatments",
           title: "Sculpt your figure and revitalize your body",
+          price: "Price from $3,000.00 MXN",
           summary:
             "A comprehensive treatment to reduce measurements, improve skin texture and support toxin elimination.",
           description:
@@ -222,6 +225,7 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "Safe recovery and complete wellbeing",
           summary:
             "Specialized treatments to support recovery after aesthetic or medical surgery.",
+          price: "Price from $5,000.00 MXN",
           description:
             "Post-surgical treatments are designed to support the recovery process after aesthetic or medical surgery. At Life Skin Care Irapuato, we apply specialized techniques based on medical indications to support faster recovery, promote healing, reduce inflammation and help the body regain balance in a quicker and more comfortable way.",
           consistList: [
@@ -278,6 +282,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (eyebrow) eyebrow.textContent = cardTranslations.eyebrow;
     if (title) title.textContent = cardTranslations.title;
     if (summaryParagraphs[0]) summaryParagraphs[0].textContent = cardTranslations.summary;
+    if (cardTranslations.price && summaryParagraphs[1])
+      summaryParagraphs[1].textContent = cardTranslations.price;
     if (hintLabel) hintLabel.textContent = content.cardHint;
 
     if (detailParagraphs[0]) detailParagraphs[0].textContent = cardTranslations.description;
