@@ -73,12 +73,12 @@
           <div class="carousel__track">
             <div class="carousel__slide">
              <a href="./Servicios/Faciales.html"> 
-              <img src="./images/Promociones/Hollywood_Peel.jpeg" alt="Area de aparatologia" />
+              <img src="./images/Carrusel_inicio/Aparatologia.png" alt="Area de aparatologia" />
             </a>
             </div>
             <div class="carousel__slide">
               <a href="./Servicios/Depilacion.html">
-                <img src="./images/Promociones/Promocion_laser.jpeg" alt="Cabina de tratamientos faciales" />
+                <img src="./images/Carrusel_inicio/Faciales.png" alt="Cabina de tratamientos faciales" />
             </a>
               </div>
             <div class="carousel__slide">
@@ -363,6 +363,24 @@
     </section>
   </main>
 
+  <!-- Popup de Promociones -->
+  <div class="promo-popup" id="promoPopup" role="dialog" aria-modal="true" aria-labelledby="promoPopupTitle" hidden>
+    <div class="promo-popup__overlay" data-promo-close></div>
+    <div class="promo-popup__dialog">
+      <button class="promo-popup__close" type="button" aria-label="Cerrar promociones" data-promo-close>&times;</button>
+      <h2 class="promo-popup__title" id="promoPopupTitle">Promociones</h2>
+      <p class="promo-popup__subtitle">Aprovecha nuestras promociones. Haz clic para ver más.</p>
+      <div class="promo-popup__grid">
+        <a class="promo-popup__item" href="./Servicios/Faciales.html">
+          <img src="./images/Promociones/Hollywood_Peel.jpeg" alt="Promoción Hollywood Peel" loading="lazy" />
+        </a>
+        <a class="promo-popup__item" href="./Servicios/Depilacion.html">
+          <img src="./images/Promociones/Promocion_laser.jpeg" alt="Promoción de depilación láser" loading="lazy" />
+        </a>
+      </div>
+    </div>
+  </div>  
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer__inner">
@@ -455,6 +473,28 @@
       }
 
       document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Popup de Promociones (aparece a los 3 segundos)
+      const promoPopup = document.getElementById('promoPopup');
+      if (promoPopup) {
+        const openPopup = () => {
+          promoPopup.hidden = false;
+          document.body.classList.add('promo-open');
+        };
+        const closePopup = () => {
+          promoPopup.hidden = true;
+          document.body.classList.remove('promo-open');
+        };
+
+        setTimeout(openPopup, 5000);
+
+        promoPopup.querySelectorAll('[data-promo-close]').forEach((el) => {
+          el.addEventListener('click', closePopup);
+        });
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && !promoPopup.hidden) closePopup();
+        });
+      }
 
       // Accordion for Eliminación de Tatuajes
       const tattooCard = document.querySelector('#tatuajes [data-accordion]');
