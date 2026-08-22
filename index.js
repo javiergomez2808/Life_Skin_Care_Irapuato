@@ -1,26 +1,27 @@
 const i18n = {
   es: {
     html_lang: "es",
-    title: "Life Skin Care Irapuato",
+    title: "Life Skin Care Irapuato | Spa, Masajes y Tratamientos Estéticos en Irapuato, Gto.",
     meta_description:
-      "Life Skin Care Irapuato ofrece masajes, faciales, tratamientos corporales y paquetes en un ambiente en calma y moderno.",
+      "Spa y centro de bienestar en Irapuato, Guanajuato. Masajes relajantes y terapéuticos, limpiezas faciales, tratamientos corporales reductivos, depilación láser y cursos profesionales. ¡Reserva hoy!",
     nav_services: "Servicios",
     nav_about: "Acerca de Nosotros",
-    nav_reviews: "Resenas",
+    nav_reviews: "Reseñas",
     nav_book: "Reserva",
     nav_cursos: "Cursos",
     language_label: "Selector de idioma",
     hero_pill: "Amamos Cuidar Tu Piel",
+    hero_gallery_aria: "Galería de imágenes del spa",
     hero_prev: "Imagen anterior",
     hero_next: "Imagen siguiente",
     hero_dots: "Seleccionar imagen",
     hero_lead:
-      "Masajes terapeuticos, tratamientos faciales, tratamientos corporales y paquetes de spa disenados para ayudarte a relajarte y sentirte de maravilla.",
+      "Masajes terapéuticos, tratamientos faciales, tratamientos corporales y paquetes de spa diseñados para ayudarte a relajarte y sentirte de maravilla.",
     hero_book: "Reserva con nosotros",
     hero_explore: "Explora nuestros Servicios",
-    stat_rating: "Calificacion",
+    stat_rating: "Calificación",
     stat_specialists: "Especialistas",
-    stat_days: "Dias Abiertos",
+    stat_days: "Días Abiertos",
     services_title: "Nuestros Servicios",
     service_masajes: "Masajes",
     service_corporales: "Corporales",
@@ -28,50 +29,52 @@ const i18n = {
     service_depilacion: "Depilación Láser Soprano Titanium",
     service_otrosservicios: "Otros Servicios",
     service_tatuajes: "Eliminación de Tatuajes",
-    service_aparatologia: "Aparatologia",
-    service_anticelulitico: "Anticelulitico",
-    service_cursos: "Cursos",
-    service_postquirurgicos: "Postquirurgicos",
-    service_hifem: "HIFEM",
-    service_drenaje: "Drenaje Linfatico",
-    service_eliminaciones: "Eliminaciones",
+    cursos_title: "Cursos",
+    cursos_subtitle: "Capacítate con nosotros.",
+    cursos_gallery_aria: "Galería de cursos",
+    cursos_prev: "Curso anterior",
+    cursos_next: "Curso siguiente",
+    cursos_dots: "Seleccionar curso",
     about_title: "Acerca de Life Skin Care",
     about_text:
-      "Somos un grupo de profesionistas en diversas areas que nos preocupamos por cuidar a nuestros pacientes en cada una de nuestras areas brindando servicio y profesionalismo para su bienestar.",
+      "Somos un grupo de profesionistas en diversas áreas que nos preocupamos por cuidar a nuestros pacientes en cada una de nuestras áreas brindando servicio y profesionalismo para su bienestar.",
     about_h1: "Cuidado Profesional",
     about_p1:
       "Especialistas capacitados y con vasta experiencia en el cuidado de tu cuerpo y bienestar.",
     about_h2: "Limpieza + Productos Amigables",
     about_p2:
-      "Formulas respetuosas con la piel, libres de irritantes agresivos siempre que sea posible.",
+      "Fórmulas respetuosas con la piel, libres de irritantes agresivos siempre que sea posible.",
     about_h3: "Espacios Relajantes",
-    about_p3: "Iluminacion suave y habitaciones tranquilas disenadas para relajarse.",
+    about_p3: "Iluminación suave y habitaciones tranquilas diseñadas para relajarse.",
     hours_title: "Horario",
     hours_mf: "Lunes-Viernes",
-    hours_sat: "Sabados",
+    hours_sat: "Sábados",
     hours_sun: "Domingos",
     hours_closed: "Cerrado",
-    reviews_title: "Resenas",
+    reviews_title: "Reseñas",
     reviews_subtitle:
       "Lo que dicen nuestros clientes sobre su experiencia en Life Skin Care Irapuato.",
-    reviews_aria: "Resenas de clientes",
-    review_prev: "Resena anterior",
-    review_next: "Siguiente resena",
-    review_dots: "Seleccionar resena",
+    reviews_aria: "Reseñas de clientes",
+    review_prev: "Reseña anterior",
+    review_next: "Siguiente reseña",
+    review_dots: "Seleccionar reseña",
     contact_title: "Reserva con nosotros",
     contact_text:
-      "Para programar una cita, pongase en contacto con nosotros directamente. Estaremos encantados de ayudarle y confirmar la disponibilidad.",
+      "Para programar una cita, póngase en contacto con nosotros directamente. Estaremos encantados de ayudarle y confirmar la disponibilidad.",
     contact_whatsapp: "WhatsApp:",
     contact_note:
       "Incluye el servicio, la fecha y la hora que prefieres al ponerte en contacto con nosotros.",
     footer_services: "Servicios",
     footer_book: "Reserva",
+    promo_title: "Promociones",
+    promo_subtitle: "Aprovecha nuestras promociones. Haz clic para ver más.",
+    promo_close: "Cerrar promociones",
   },
   en: {
     html_lang: "en",
-    title: "Life Skin Care Irapuato",
+    title: "Life Skin Care Irapuato | Spa, Massages & Aesthetic Treatments in Irapuato, Mexico",
     meta_description:
-      "Life Skin Care Irapuato offers massages, facials, body treatments, and packages in a calm, modern environment.",
+      "Spa and wellness center in Irapuato, Guanajuato. Relaxing and therapeutic massages, facials, body contouring treatments, laser hair removal, and professional courses. Book today!",
     nav_services: "Services",
     nav_about: "About Us",
     nav_reviews: "Reviews",
@@ -79,6 +82,7 @@ const i18n = {
     nav_cursos: "Courses",
     language_label: "Language selector",
     hero_pill: "We Love Caring For Your Skin",
+    hero_gallery_aria: "Spa image gallery",
     hero_prev: "Previous image",
     hero_next: "Next image",
     hero_dots: "Select image",
@@ -96,13 +100,12 @@ const i18n = {
     service_depilacion: "Soprano Titanium Laser",
     service_otrosservicios: "Other Services",
     service_tatuajes: "Tattoo Removal",
-    service_aparatologia: "Aesthetic Devices",
-    service_anticelulitico: "Anti-Cellulite",
-    service_cursos: "Courses",
-    service_postquirurgicos: "Post-Surgical",
-    service_hifem: "HIFEM",
-    service_drenaje: "Lymphatic Drainage",
-    service_eliminaciones: "Removal Treatments",
+    cursos_title: "Courses",
+    cursos_subtitle: "Train with us.",
+    cursos_gallery_aria: "Course gallery",
+    cursos_prev: "Previous course",
+    cursos_next: "Next course",
+    cursos_dots: "Select course",
     about_title: "About Life Skin Care",
     about_text:
       "We are a multidisciplinary team focused on caring for every patient, delivering high-quality service and professional attention for your wellbeing.",
@@ -132,6 +135,9 @@ const i18n = {
       "Please include your preferred service, date, and time when contacting us.",
     footer_services: "Services",
     footer_book: "Book",
+    promo_title: "Promotions",
+    promo_subtitle: "Take advantage of our promotions. Click to see more.",
+    promo_close: "Close promotions",
   },
 };
 
@@ -161,6 +167,7 @@ function applyLanguage(lang) {
   setAttr("#language-select", "aria-label", t.language_label);
 
   setText(".pill", t.hero_pill);
+  setAttr(".hero .carousel--hero", "aria-label", t.hero_gallery_aria);
   setAttr(".hero .carousel__btn.prev", "aria-label", t.hero_prev);
   setAttr(".hero .carousel__btn.next", "aria-label", t.hero_next);
   setAttr(".hero .carousel__dots", "aria-label", t.hero_dots);
@@ -178,16 +185,13 @@ function applyLanguage(lang) {
   setText('.service-card[href="./Servicios/Depilacion.html"] h3', t.service_depilacion);
   setText('.service-card[href="./Servicios/OtrosServicios.html"] h3', t.service_otrosservicios);
   setText('.service-card[href="./Servicios/Tatuajes.html"] h3', t.service_tatuajes);
-  setText('.service-card[href="./Servicios/Aparatos.html"] h3', t.service_aparatologia);
-  setText('.service-card[href="./Servicios/Anticelulitico.html"] h3', t.service_anticelulitico);
-  setText('.service-card[href="./Servicios/Cursos.html"] h3', t.service_cursos);
-  setText(
-    '.service-card[href="./Servicios/Postquirurgicos.html"] h3',
-    t.service_postquirurgicos
-  );
-  setText('.service-card[href="./Servicios/HIFEM.html"] h3', t.service_hifem);
-  setText('.service-card[href="./Servicios/Drenaje.html"] h3', t.service_drenaje);
-  setText('.service-card[href="./Servicios/Eliminacion.html"] h3', t.service_eliminaciones);
+
+  setText("#cursos .section__head h2", t.cursos_title);
+  setText("#cursos .section__head .muted", t.cursos_subtitle);
+  setAttr(".carousel--courses", "aria-label", t.cursos_gallery_aria);
+  setAttr(".carousel--courses .carousel__btn.prev", "aria-label", t.cursos_prev);
+  setAttr(".carousel--courses .carousel__btn.next", "aria-label", t.cursos_next);
+  setAttr(".carousel--courses .carousel__dots", "aria-label", t.cursos_dots);
 
   setText("#about .section__head h2", t.about_title);
   setText("#about .section__head .muted", t.about_text);
@@ -217,6 +221,10 @@ function applyLanguage(lang) {
 
   setText('.footer__links a[href="#services"]', t.footer_services);
   setText('.footer__links a[href="#contact"]', t.footer_book);
+
+  setText("#promoPopupTitle", t.promo_title);
+  setText(".promo-popup__subtitle", t.promo_subtitle);
+  setAttr(".promo-popup__close", "aria-label", t.promo_close);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
