@@ -707,6 +707,7 @@ img { max-width: 100%; display: block; }
 .promo-popup__grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: start;
   gap: 18px;
 }
 
@@ -723,10 +724,10 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 16px 34px rgba(47, 27, 21, 0.26);
 }
 
+/* Los promocionales llevan texto, asi que se muestran completos sin recortar. */
 .promo-popup__item img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
 }
 
 body.promo-open { overflow: hidden; }
@@ -750,4 +751,27 @@ body.promo-open { overflow: hidden; }
   .promo-popup__overlay,
   .promo-popup__dialog { animation: none; }
   .promo-popup__item { transition: none; }
+}
+
+/* Carrusel de cursos: los promocionales tienen proporciones distintas,
+   asi que se fija el alto para que el carrusel no salte al cambiar de
+   diapositiva. Se usa contain para no recortar el texto del promocional;
+   los margenes quedan transparentes sobre el fondo oscuro de la seccion. */
+.carousel--courses {
+  width: min(100%, 460px);
+  aspect-ratio: 3 / 4;
+  background: transparent;
+}
+
+.carousel--courses .carousel__track,
+.carousel--courses .carousel__slide,
+.carousel--courses .carousel__slide a {
+  height: 100%;
+}
+
+.carousel--courses .carousel__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0;
 }
