@@ -571,3 +571,28 @@ img { max-width: 100%; display: block; }
   .btn,
   .carousel__track { transition: none !important; }
 }
+
+/* Banner superior de las paginas de servicio.
+   Se limita por altura, no por ancho, para que fotos de distinta
+   proporcion ocupen el mismo alto sin recortar el contenido del promocional. */
+.page-banner {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.page-banner img {
+  width: auto;
+  max-width: 100%;
+  max-height: 420px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
+
+@media (max-width: 640px) {
+  .page-banner img {
+    max-height: 260px;
+    border-radius: var(--radius);
+  }
+}
