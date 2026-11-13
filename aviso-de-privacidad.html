@@ -51,15 +51,6 @@
       margin-top: 0;
     }
 
-    /* Datos que faltan: deben llenarse antes de publicar (buscar "pendiente") */
-    .pendiente {
-      background: #fff1b8;
-      color: #5a4300;
-      padding: 0 4px;
-      border-radius: 4px;
-      font-weight: 600;
-    }
-
     @media (max-width: 600px) {
       .aviso {
         padding: 22px 18px;
@@ -85,25 +76,20 @@
     </div>
   </header>
 
-  <!--
-    ANTES DE PUBLICAR: reemplaza todo lo marcado con class="pendiente" (nombre del responsable,
-    domicilio y fecha) y pide a un abogado que revise el texto. Busca "pendiente" en este archivo.
-  -->
   <main>
     <section class="section section--light">
       <div class="container">
         <div class="section__head">
           <h1 style="margin: 0 0 10px; font-size: clamp(1.7rem, 1.15rem + 1.1vw, 2.35rem);">Aviso de privacidad</h1>
-          <p class="muted aviso__fecha">Última actualización: <span class="pendiente">[FECHA DE PUBLICACIÓN]</span></p>
+          <p class="muted aviso__fecha">Última actualización: 13 de noviembre de 2026</p>
         </div>
 
         <article class="card aviso">
           <h2>1. ¿Quién es responsable de tus datos?</h2>
           <p>
-            <span class="pendiente">[NOMBRE COMPLETO DE LA PERSONA TITULAR DEL NEGOCIO O RAZÓN SOCIAL]</span>,
-            que opera comercialmente como <strong>Life Skin Care Irapuato</strong> («Life Skin Care», «nosotros»), con
-            domicilio en <span class="pendiente">[CALLE, NÚMERO, COLONIA Y CÓDIGO POSTAL]</span>, Irapuato, Guanajuato,
-            México, es responsable del tratamiento de tus datos personales.
+            <strong>Life Skin Care</strong>, que opera comercialmente como <strong>Life Skin Care Irapuato</strong>
+            («nosotros»), con domicilio en Boulevard Manuel Gómez Morín 3631, C.P. 36640, Irapuato, Guanajuato, México,
+            es responsable del tratamiento de tus datos personales.
           </p>
           <p>
             Para cualquier asunto de privacidad, escríbenos a
@@ -167,6 +153,8 @@
           </p>
           <ul>
             <li>La plataforma de agenda y administración que usamos y su servicio de almacenamiento en la nube, cuyos servidores pueden estar fuera de México (por ejemplo, en Estados Unidos).</li>
+            <li>Cloudflare, que publica nuestra página de reserva en línea y comprueba que quien reserva no sea un programa automático.</li>
+            <li>El servicio de correo con el que avisamos a recepción de cada reserva o cancelación en línea.</li>
             <li>WhatsApp (Meta Platforms), para enviarte confirmaciones, recordatorios y, si lo aceptas, promociones.</li>
             <li>Procesadores de pago, cuando pagas con tarjeta o en línea.</li>
             <li>Nuestro contador y el proveedor de facturación electrónica, cuando pides factura.</li>
@@ -226,7 +214,14 @@
           <h2>9. Nuestro sitio web</h2>
           <p>
             Este sitio no utiliza cookies de rastreo ni de publicidad. Solo guarda en tu navegador el idioma que elegiste
-            (español o inglés). Si agendas en línea, los datos que escribas se usarán para las finalidades de este aviso.
+            (español o inglés).
+          </p>
+          <p>
+            Nuestra reserva en línea está en <strong>reservas.angelgomezp.dev/lifeskin</strong>. Ahí te pedimos tu nombre,
+            tu WhatsApp y, si quieres, tu correo y alguna nota; no te pedimos datos de salud. Los usamos para agendar tu
+            cita y avisarte de ella, según las finalidades de este aviso. Para frenar reservas hechas por programas
+            automáticos, la página usa la verificación de Cloudflare (Turnstile), que revisa datos técnicos de tu
+            navegador solo para ese fin.
           </p>
 
           <h2>10. ¿Cuánto tiempo conservamos tus datos?</h2>
