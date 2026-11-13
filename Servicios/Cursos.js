@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
       selectEs: "Español",
       heroPill: "Cursos y Capacitaciones",
       heroTitle: "Formación Profesional",
+      proximoTitulo: "Próximo curso: Masaje Profesional.",
+      proximoTexto: "21 y 22 de noviembre, de 10:00 a. m. a 4:00 p. m. Anticipo de $500, cupo para 5 personas. Lo imparte Mary Peña.",
       intro:
         "Descubre nuestros cursos y talleres profesionales en masaje, bienestar y estética, diseñados para desarrollar habilidades prácticas con enfoque humano, técnico y especializado.",
       reserveUs: "Reserva con nosotros",
@@ -177,6 +179,8 @@ document.addEventListener("DOMContentLoaded", () => {
       selectEs: "Spanish",
       heroPill: "Courses & Training",
       heroTitle: "Professional Training",
+      proximoTitulo: "Next course: Professional Massage.",
+      proximoTexto: "November 21 and 22, 10:00 a.m. to 4:00 p.m. $500 deposit, limited to 5 people. Taught by Mary Peña.",
       intro:
         "Discover our professional courses and workshops in massage, wellness and aesthetics, designed to build practical skills with a human, technical and specialized approach.",
       reserveUs: "Book with us",
@@ -405,6 +409,8 @@ document.addEventListener("DOMContentLoaded", () => {
     setText(".hero .pill", content.heroPill);
     setText(".hero h1", content.heroTitle);
     setText(".intro .lead", content.intro);
+    setText(".cursos__proximo strong", content.proximoTitulo);
+    setText(".cursos__proximo span", content.proximoTexto);
 
     if (introButtons[0]) introButtons[0].textContent = content.reserveUs;
     if (introButtons[1]) introButtons[1].textContent = content.backServices;

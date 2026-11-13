@@ -780,3 +780,12 @@ body.promo-open { overflow: hidden; }
 .service-card__reserva { padding: 0 14px 14px; }
 .service-card__reserva .btn { width: 100%; }
 .contact__reserva { width: 100%; margin-bottom: 6px; }
+
+/* Cursos: el próximo curso, arriba del carrusel */
+.cursos__proximo {
+  max-width: 640px;
+  margin: -6px auto 22px;
+  text-align: center;
+  line-height: 1.5;
+}
+.cursos__proximo strong { display: block; }
