@@ -596,3 +596,8 @@ img { max-width: 100%; display: block; }
     border-radius: var(--radius);
   }
 }
+
+/* Reserva en línea (reservas.angelgomezp.dev/lifeskin): el botón de cada tratamiento y el del recuadro de contacto */
+.service-card__reserva { padding: 0 14px 14px; }
+.service-card__reserva .btn { width: 100%; }
+.contact__reserva { width: 100%; margin-bottom: 6px; }

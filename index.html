@@ -43,6 +43,7 @@
   </script>
   <link rel="stylesheet" href="./static/styles.css" />
   <script src="./index.js" defer></script>
+  <script src="./static/reserva.js" defer></script>
 </head>
 
 <body>
@@ -58,7 +59,7 @@
         <a href="#about">Acerca de Nosotros</a>
         <a href="#reviews">Reseñas</a>
         <a href="#cursos">Cursos</a>
-        <a href="#contact" class="btn btn--sm">Reserva</a>
+        <a href="https://reservas.angelgomezp.dev/lifeskin" class="btn btn--sm" data-reserva>Reserva</a>
         <label class="sr-only" for="language-select">Selector de idioma</label>
         <select id="language-select" class="language-select" aria-label="Selector de idioma">
           <option value="es" selected>Español</option>
@@ -123,7 +124,7 @@
         </p>
 
         <div class="hero__actions">
-          <a class="btn" href="#contact">Reserva con nosotros</a>
+          <a class="btn" href="https://reservas.angelgomezp.dev/lifeskin" data-reserva>Reserva con nosotros</a>
           <a class="btn btn--ghost" href="#services">Explora nuestros Servicios</a>
         </div>
 
@@ -346,12 +347,12 @@
           <div class="section__head section__head--left">
             <h2>Reserva con nosotros</h2>
             <p class="muted">
-              Para programar una cita, póngase en contacto con nosotros directamente.
-              Estaremos encantados de ayudarle y confirmar la disponibilidad.
+              Reserva en línea en un par de minutos: eliges el tratamiento, el día y la hora. Si prefieres, escríbenos por WhatsApp.
             </p>
           </div>
 
           <div class="card contact__card">
+            <a class="btn contact__reserva" href="https://reservas.angelgomezp.dev/lifeskin" data-reserva-texto>Reservar en línea</a>
             <div class="contact__line">
             </div>
 

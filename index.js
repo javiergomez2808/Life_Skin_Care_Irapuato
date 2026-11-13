@@ -60,7 +60,7 @@ const i18n = {
     review_dots: "Seleccionar reseña",
     contact_title: "Reserva con nosotros",
     contact_text:
-      "Para programar una cita, póngase en contacto con nosotros directamente. Estaremos encantados de ayudarle y confirmar la disponibilidad.",
+      "Reserva en línea en un par de minutos: eliges el tratamiento, el día y la hora. Si prefieres, escríbenos por WhatsApp y con gusto te ayudamos.",
     contact_whatsapp: "WhatsApp:",
     contact_note:
       "Incluye el servicio, la fecha y la hora que prefieres al ponerte en contacto con nosotros.",
@@ -129,7 +129,7 @@ const i18n = {
     review_dots: "Select review",
     contact_title: "Book With Us",
     contact_text:
-      "To schedule an appointment, contact us directly. We will be happy to help and confirm availability.",
+      "Book online in a couple of minutes: choose your treatment, day and time. Or message us on WhatsApp and we will be happy to help.",
     contact_whatsapp: "WhatsApp:",
     contact_note:
       "Please include your preferred service, date, and time when contacting us.",
@@ -161,7 +161,7 @@ function applyLanguage(lang) {
   setText('.nav a[href="#services"]', t.nav_services);
   setText('.nav a[href="#about"]', t.nav_about);
   setText('.nav a[href="#reviews"]', t.nav_reviews);
-  setText('.nav a[href="#contact"]', t.nav_book);
+  setText('.nav a[data-reserva]', t.nav_book);
   setText('.nav a[href="#cursos"]', t.nav_cursos);
   setText('label[for="language-select"]', t.language_label);
   setAttr("#language-select", "aria-label", t.language_label);
@@ -172,7 +172,7 @@ function applyLanguage(lang) {
   setAttr(".hero .carousel__btn.next", "aria-label", t.hero_next);
   setAttr(".hero .carousel__dots", "aria-label", t.hero_dots);
   setText(".lead", t.hero_lead);
-  setText('.hero__actions .btn[href="#contact"]', t.hero_book);
+  setText('.hero__actions .btn[data-reserva]', t.hero_book);
   setText(".hero__actions .btn--ghost", t.hero_explore);
   setText(".hero__stats .stat:nth-child(1) .stat__label", t.stat_rating);
   setText(".hero__stats .stat:nth-child(2) .stat__label", t.stat_specialists);
