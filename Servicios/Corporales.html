@@ -22,6 +22,7 @@
   <meta name="twitter:image" content="https://www.lifeskincareirapuato.com/images/og-image.jpg" />
   <link rel="stylesheet" href="../static/styleservicios.css" />
     <script src="../Servicios/Corporales.js" defer></script>
+    <script src="../static/reserva.js" defer></script>
   <style>
     .services-page {
       padding-top: 72px;
@@ -211,7 +212,7 @@
       </a>
 
       <nav class="nav" aria-label="Primary navigation">
-        <a href="#contact" class="btn btn--sm">Reserva</a>
+        <a href="https://reservas.angelgomezp.dev/lifeskin" class="btn btn--sm">Reserva</a>
         <label class="sr-only" for="language-select">Selector de idioma</label>
         <select id="language-select" class="language-select" aria-label="Selector de idioma">
           <option value="es" selected>Español</option>
@@ -241,7 +242,7 @@
           Tratamientos corporales reductivos, anticelulíticos, HIFEM y postquirúrgicos en Irapuato, diseñados para moldear tu figura, mejorar la firmeza de tu piel y renovar tu confianza.
         </p>
         <div class="hero__actions">
-          <a class="btn" href="#contact">Reserva con nosotros</a>
+          <a class="btn" href="https://reservas.angelgomezp.dev/lifeskin">Reserva con nosotros</a>
           <a class="btn btn--ghost" href="../index.html#services">Volver a servicios</a>
         </div>
       </div>
@@ -269,6 +270,9 @@
             </div>
           </div>
         </button>
+        <div class="service-card__reserva">
+          <a class="btn btn--sm" href="https://reservas.angelgomezp.dev/lifeskin?servicio=reductivo" data-reserva-texto>Reservar en línea</a>
+        </div>
         <div class="service-card__panel">
           <p>
             Este tratamiento combina técnicas manuales y aparatología avanzada para lograr una reducción efectiva de medidas,
@@ -314,6 +318,9 @@
             </div>
           </div>
         </button>
+        <div class="service-card__reserva">
+          <a class="btn btn--sm" href="https://reservas.angelgomezp.dev/lifeskin?servicio=hifem" data-reserva-texto>Reservar en línea</a>
+        </div>
         <div class="service-card__panel" hidden>
           <p>
             El tratamiento con HIFEM (High-Intensity Focused Electromagnetic) utiliza energía electromagnética focalizada
@@ -361,6 +368,9 @@
             </div>
           </div>
         </button>
+        <div class="service-card__reserva">
+          <a class="btn btn--sm" href="https://reservas.angelgomezp.dev/lifeskin?servicio=anticelulitico" data-reserva-texto>Reservar en línea</a>
+        </div>
         <div class="service-card__panel" hidden>
           <p>
             Los tratamientos anticelulíticos están diseñados para reducir la apariencia de la celulitis, mejorar la textura
@@ -408,6 +418,9 @@
             </div>
           </div>
         </button>
+        <div class="service-card__reserva">
+          <a class="btn btn--sm" href="https://reservas.angelgomezp.dev/lifeskin?servicio=postquirurgico" data-reserva-texto>Reservar en línea</a>
+        </div>
         <div class="service-card__panel" hidden>
           <p>
             Los tratamientos postquirúrgicos están diseñados para acompañar el proceso de recuperación después de una cirugía
@@ -443,6 +456,34 @@
     </div>
   </div>
 </section>
+
+    <!-- Reserva -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-card">
+          <div class="section__head">
+            <h2>Reserva con nosotros</h2>
+            <p class="muted">
+              Reserva en línea en un par de minutos: eliges el tratamiento, el día y la hora. Si prefieres, escríbenos por WhatsApp.
+            </p>
+          </div>
+
+          <div class="card contact__card">
+            <a class="btn contact__reserva" href="https://reservas.angelgomezp.dev/lifeskin" data-reserva-texto>Reservar en línea</a>
+            <div class="contact__line">
+            </div>
+            <div class="contact__line">
+              <strong>WhatsApp:</strong>
+              <a href="https://wa.me/524621059586" target="_blank" rel="noopener">+52 462 105 9586</a>
+            </div>
+            <div class="divider"></div>
+            <p class="muted small">
+              Incluye el tratamiento, la fecha y la hora que prefieres al enviar tu mensaje.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
       <!-- Footer -->

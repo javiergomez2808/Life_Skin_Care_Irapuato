@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
       sectionText: "Selecciona una tarjeta para ver la descripción completa de cada experiencia.",
       contactTitle: "Reserva con nosotros",
       contactText:
-        "Para programar una cita, contáctanos directamente y confirma disponibilidad.",
+        "Reserva en línea en un par de minutos: eliges el tratamiento, el día y la hora. Si prefieres, escríbenos por WhatsApp.",
       contactHint:
         "Incluye el masaje, la fecha y la hora que prefieres al enviar tu mensaje.",
       footerText: "Life Skin Care Irapuato. Todos los derechos reservados.",
@@ -261,7 +261,7 @@ document.addEventListener("DOMContentLoaded", () => {
       sectionText: "Select a card to view the full description of each experience.",
       contactTitle: "Book with us",
       contactText:
-        "To schedule an appointment, contact us directly and confirm availability.",
+        "Book online in a couple of minutes: choose your treatment, day and time. Or message us on WhatsApp if you prefer.",
       contactHint:
         "Include the massage, preferred date and preferred time when sending your message.",
       footerText: "Life Skin Care Irapuato. All rights reserved.",

@@ -22,6 +22,7 @@
   <meta name="twitter:image" content="https://www.lifeskincareirapuato.com/images/og-image.jpg" />
   <link rel="stylesheet" href="../static/styleservicios.css" />
     <script src="../Servicios/Faciales.js" defer></script>
+    <script src="../static/reserva.js" defer></script>
   <style>
     .services-page {
       padding-top: 72px;
@@ -211,7 +212,7 @@
       </a>
 
       <nav class="nav" aria-label="Primary navigation">
-        <a href="#contact" class="btn btn--sm">Reserva</a>
+        <a href="https://reservas.angelgomezp.dev/lifeskin" class="btn btn--sm">Reserva</a>
         <label class="sr-only" for="language-select">Selector de idioma</label>
         <select id="language-select" class="language-select" aria-label="Selector de idioma">
           <option value="es" selected>Español</option>
@@ -241,7 +242,7 @@
           Descubre tratamientos faciales y estéticos diseñados para limpiar, revitalizar y transformar tu piel con tecnología avanzada, bienestar y cuidado profesional.
         </p>
         <div class="hero__actions">
-          <a class="btn" href="#contact">Reserva con nosotros</a>
+          <a class="btn" href="https://reservas.angelgomezp.dev/lifeskin">Reserva con nosotros</a>
           <a class="btn btn--ghost" href="../index.html#services">Volver a servicios</a>
         </div>
       </div>
@@ -275,6 +276,9 @@
                 </div>
               </div>
             </button>
+            <div class="service-card__reserva">
+              <a class="btn btn--sm" href="https://reservas.angelgomezp.dev/lifeskin?servicio=limpieza" data-reserva-texto>Reservar en línea</a>
+            </div>
             <div class="service-card__panel">
               <p>
                 La limpieza facial profesional elimina células muertas, exceso de grasa y contaminantes, preparando la piel para absorber mejor nutrientes y tratamientos posteriores.
@@ -318,6 +322,9 @@
                 </div>
               </div>
             </button>
+            <div class="service-card__reserva">
+              <a class="btn btn--sm" href="https://reservas.angelgomezp.dev/lifeskin?servicio=aparatologia" data-reserva-texto>Reservar en línea</a>
+            </div>
             <div class="service-card__panel" hidden>
               <p>
                 Los faciales con aparatología combinan técnicas profesionales con tecnología de vanguardia para ofrecer soluciones personalizadas según cada tipo de piel.
@@ -360,6 +367,9 @@
                 </div>
               </div>
             </button>
+            <div class="service-card__reserva">
+              <a class="btn btn--sm" href="https://reservas.angelgomezp.dev/lifeskin?servicio=antiaging" data-reserva-texto>Reservar en línea</a>
+            </div>
             <div class="service-card__panel" hidden>
               <p>
                 El tratamiento antiaging ayuda a restaurar la firmeza, mejorar la luminosidad y estimular la regeneración celular mediante técnicas avanzadas y productos especializados.
@@ -403,6 +413,9 @@
                 </div>
               </div>
             </button>
+            <div class="service-card__reserva">
+              <a class="btn btn--sm" href="https://reservas.angelgomezp.dev/lifeskin?servicio=acne" data-reserva-texto>Reservar en línea</a>
+            </div>
             <div class="service-card__panel" hidden>
               <p>
                 Purifica y renueva tu piel con nuestro tratamiento facial especializado para acné. Diseñado para pieles con imperfecciones, brotes y exceso de grasa, este procedimiento ayuda a limpiar profundamente los poros, controlar la producción de sebo y disminuir la inflamación causada por el acné. Ideal para adolescentes y adultos que buscan una piel más limpia, uniforme y saludable.
@@ -435,6 +448,9 @@
                 </div>
               </div>
             </button>
+            <div class="service-card__reserva">
+              <a class="btn btn--sm" href="https://reservas.angelgomezp.dev/lifeskin?servicio=despigmentante" data-reserva-texto>Reservar en línea</a>
+            </div>
             <div class="service-card__panel" hidden>
               <p>
                 Devuelve luminosidad y uniformidad a tu piel con nuestro tratamiento despigmentante facial. Este procedimiento está diseñado para disminuir manchas ocasionadas por el sol, acné, edad o cambios hormonales, ayudando a mejorar el tono y textura de la piel. Ideal para quienes desean una piel más uniforme, radiante y rejuvenecida.
@@ -468,6 +484,9 @@
                 </div>
               </div>
             </button>
+            <div class="service-card__reserva">
+              <a class="btn btn--sm" href="https://reservas.angelgomezp.dev/lifeskin?servicio=hidratacion" data-reserva-texto>Reservar en línea</a>
+            </div>
             <div class="service-card__panel" hidden>
               <p>
                 Recupera la suavidad, elasticidad y frescura de tu piel con nuestro tratamiento facial de hidratación profunda. Diseñado para pieles secas, deshidratadas o apagadas, este facial ayuda a restaurar la humedad natural del rostro y proteger la barrera cutánea. Ideal para quienes buscan una piel más luminosa, suave y revitalizada.
@@ -495,11 +514,12 @@
           <div class="section__head">
             <h2>Reserva con nosotros</h2>
             <p class="muted">
-              Para programar una cita, contactanos directamente y confirma disponibilidad.
+              Reserva en línea en un par de minutos: eliges el tratamiento, el día y la hora. Si prefieres, escríbenos por WhatsApp.
             </p>
           </div>
 
           <div class="card contact__card">
+            <a class="btn contact__reserva" href="https://reservas.angelgomezp.dev/lifeskin" data-reserva-texto>Reservar en línea</a>
             <div class="contact__line">
             </div>
             <div class="contact__line">
