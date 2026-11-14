@@ -789,3 +789,10 @@ body.promo-open { overflow: hidden; }
   line-height: 1.5;
 }
 .cursos__proximo strong { display: block; }
+
+/* Popup con una sola promoción (vertical): una columna, sin estirarse */
+.promo-popup__grid--una {
+  grid-template-columns: 1fr;
+  max-width: 420px;
+  margin: 0 auto;
+}

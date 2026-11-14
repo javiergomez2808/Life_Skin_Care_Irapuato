@@ -370,8 +370,21 @@
     </section>
   </main>
 
-  <!-- Popup de promociones: sin promociones vigentes desde el 13/11/2026. Para volver a usarlo, recupera el bloque
-       «promo-popup» del historial de git; el script de abajo y static/styles.css siguen listos. -->
+  <!-- Popup de promociones. data-hasta: último día que aparece (después ya no se abre solo).
+       Para la siguiente promoción, cambia la imagen, el texto alternativo y la fecha. -->
+  <div class="promo-popup" id="promoPopup" role="dialog" aria-modal="true" aria-labelledby="promoPopupTitle" data-hasta="2026-11-15" hidden>
+    <div class="promo-popup__overlay" data-promo-close></div>
+    <div class="promo-popup__dialog">
+      <button class="promo-popup__close" type="button" aria-label="Cerrar promociones" data-promo-close>&times;</button>
+      <h2 class="promo-popup__title" id="promoPopupTitle">Promociones</h2>
+      <p class="promo-popup__subtitle">Aprovecha nuestras promociones. Haz clic para agendar tu cita.</p>
+      <div class="promo-popup__grid promo-popup__grid--una">
+        <a class="promo-popup__item" href="https://reservas.angelgomezp.dev/lifeskin">
+          <img src="./images/Promociones/Buen_Fin_2026.jpeg" alt="Fin Increíble: 20% de descuento en todos nuestros servicios este 13, 14 y 15 de noviembre. Atención por citas. Adquiere tu paquete y se respeta la promoción." width="840" height="1112" />
+        </a>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
@@ -479,7 +492,9 @@
           document.body.classList.remove('promo-open');
         };
 
-        setTimeout(openPopup, 5000);
+        // Solo mientras la promoción está vigente (hasta el final de data-hasta, hora de Irapuato)
+        const hasta = promoPopup.dataset.hasta;
+        if (!hasta || Date.now() <= Date.parse(`${hasta}T23:59:59-06:00`)) setTimeout(openPopup, 5000);
 
         promoPopup.querySelectorAll('[data-promo-close]').forEach((el) => {
           el.addEventListener('click', closePopup);

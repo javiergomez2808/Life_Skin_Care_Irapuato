@@ -69,7 +69,7 @@ const i18n = {
     footer_services: "Servicios",
     footer_book: "Reserva",
     promo_title: "Promociones",
-    promo_subtitle: "Aprovecha nuestras promociones. Haz clic para ver más.",
+    promo_subtitle: "Aprovecha nuestras promociones. Haz clic para agendar tu cita.",
     promo_close: "Cerrar promociones",
   },
   en: {
@@ -140,7 +140,7 @@ const i18n = {
     footer_services: "Services",
     footer_book: "Book",
     promo_title: "Promotions",
-    promo_subtitle: "Take advantage of our promotions. Click to see more.",
+    promo_subtitle: "Take advantage of our promotions. Click to book your appointment.",
     promo_close: "Close promotions",
   },
 };
