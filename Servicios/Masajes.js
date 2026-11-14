@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
           summary:
             "Movimientos suaves y armoniosos para disminuir el estrés y renovar tu energía.",
           price: "Precio desde $600.00 MXN",
-          duration: "Duración: 45 minutos",
+          duration: "Duración: 50 minutos",
           description:
             "El masaje relajante ayuda a liberar tensiones, reducir el estrés y recuperar el equilibrio del cuerpo mediante movimientos suaves y armoniosos.",
           ideal:
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
           summary:
             "Trabajo firme en espalda, cuello y hombros para liberar nudos musculares.",
           price: "Precio desde $600.00 MXN",
-          duration: "Duración: 45 minutos",
+          duration: "Duración: 50 minutos",
           description:
             "Este masaje trabaja zonas de mayor rigidez como espalda, cuello y hombros mediante técnicas profundas que liberan contracturas y mejoran la movilidad.",
           list: [
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
           summary:
             "Presión manual en puntos clave para armonizar cuerpo y mente.",
           price: "Precio desde $700.00 MXN",
-          duration: "Duración: 45 minutos",
+          duration: "Duración: 50 minutos",
           description:
             "El Shiatsu utiliza presión con dedos y palmas en puntos específicos del cuerpo para equilibrar la energía vital y aliviar tensiones.",
           list: [
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
           summary:
             "Presiones, estiramientos y movilizaciones para equilibrar el Qi.",
           price: "Precio desde $600.00 MXN",
-          duration: "Duración: 45 minutos",
+          duration: "Duración: 50 minutos",
           description:
             "El masaje Tuina combina presiones, estiramientos y movilizaciones para estimular el flujo de energía (Qi) y favorecer la salud integral.",
           list: [
@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
           summary:
             "Estiramientos asistidos y presión profunda con un ritmo fluido.",
           price: "Precio desde $600.00 MXN",
-          duration: "Duración: 45 minutos",
+          duration: "Duración: 50 minutos",
           description:
             "Técnica ancestral que combina estiramientos asistidos, similares al yoga, con presiones profundas.",
           list: [
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
           summary:
             "Movimientos largos y envolventes para liberar bloqueos físicos y emocionales.",
           price: "Precio desde $700.00 MXN",
-          duration: "Duración: 45 minutos",
+          duration: "Duración: 50 minutos",
           description:
             "Técnica tradicional de Hawái caracterizada por movimientos largos y fluidos que relajan el cuerpo y la mente.",
           list: [
@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
           summary:
             "Termoterapia con masaje relajante para liberar tensión muscular.",
           price: "Precio desde $800.00 MXN",
-          duration: "Duración: 45 minutos",
+          duration: "Duración: 50 minutos",
           description:
             "Utiliza 37 piedras volcánicas calientes colocadas en puntos estratégicos del cuerpo para liberar tensiones musculares.",
           list: [
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
           summary:
             "Maniobras profundas y precisas para aliviar dolor, rigidez y limitación de movimiento.",
           price: "Precio desde $450.00 MXN",
-          duration: "Duración: 45 minutos",
+          duration: "Duración: 50 minutos",
           description:
             "Combina técnicas profundas para tratar lesiones, contracturas y mejorar la movilidad.",
           list: [
@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", () => {
           summary:
             "Masaje profundo con técnicas complementarias para deportistas y personas con alta demanda física.",
           price: "Precio desde $600.00 MXN",
-          duration: "Duración: 45 minutos",
+          duration: "Duración: 50 minutos",
           description:
             "Masaje especializado para deportistas que puede incluir técnicas como ventosas, acupuntura, moxas y vendaje neuromuscular.",
           list: [
@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
           summary:
             "Movimientos suaves para estimular el sistema linfático y disminuir la retención de líquidos.",
           price: "Precio desde $600.00 MXN",
-          duration: "Duración: 45 minutos",
+          duration: "Duración: 50 minutos",
           description:
             "Técnica delicada y precisa que favorece la eliminación de toxinas y líquidos retenidos, brindando una sensación marcada de ligereza.",
           list: [
@@ -211,8 +211,8 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "Equilibrio integral y renovación",
           summary:
             "Masaje con enfoque holístico para armonizar cuerpo, mente y energía.",
-          price: "Precio desde $750.00 MXN",
-          duration: "Duración: 45 minutos",
+          price: "Precio desde $700.00 MXN",
+          duration: "Duración: 50 minutos",
           description:
             "El masaje Ayurveda utiliza aceites y maniobras fluidas para apoyar el equilibrio integral del cuerpo y promover una relajación profunda.",
           list: [
@@ -230,7 +230,7 @@ document.addEventListener("DOMContentLoaded", () => {
           summary:
             "Técnica suave para relajar, armonizar y generar una sensación de ligereza.",
           price: "Precio desde $600.00 MXN",
-          duration: "Duración: 45 minutos",
+          duration: "Duración: 50 minutos",
           description:
             "Miyana ofrece una experiencia de relajación suave y envolvente enfocada en restaurar el equilibrio y el bienestar corporal.",
           list: [
@@ -275,7 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
           summary:
             "Gentle, harmonious movements to reduce stress and renew your energy.",
           price: "Price from $600.00 MXN",
-          duration: "Duration: 45 minutes",
+          duration: "Duration: 50 minutes",
           description:
             "The relaxing massage helps release tension, reduce stress and restore body balance through gentle and harmonious movements.",
           ideal: "Ideal for anyone who needs a real pause within their routine.",
@@ -293,7 +293,7 @@ document.addEventListener("DOMContentLoaded", () => {
           summary:
             "Focused work on the back, neck and shoulders to release muscle knots.",
           price: "Price from $600.00 MXN",
-          duration: "Duration: 45 minutes",
+          duration: "Duration: 50 minutes",
           description:
             "This massage works on areas with greater stiffness such as the back, neck and shoulders through deep techniques that release contractures and improve mobility.",
           list: [
@@ -311,7 +311,7 @@ document.addEventListener("DOMContentLoaded", () => {
           summary:
             "Manual pressure on key points to harmonize body and mind.",
           price: "Price from $700.00 MXN",
-          duration: "Duration: 45 minutes",
+          duration: "Duration: 50 minutes",
           description:
             "Shiatsu uses finger and palm pressure on specific body points to balance vital energy and relieve tension.",
           list: [
@@ -329,7 +329,7 @@ document.addEventListener("DOMContentLoaded", () => {
           summary:
             "Pressure, stretching and mobilization to balance Qi.",
           price: "Price from $600.00 MXN",
-          duration: "Duration: 45 minutes",
+          duration: "Duration: 50 minutes",
           description:
             "Tuina massage combines pressure, stretching and mobilization to stimulate energy flow (Qi) and support overall health.",
           list: [
@@ -347,7 +347,7 @@ document.addEventListener("DOMContentLoaded", () => {
           summary:
             "Assisted stretches and deep pressure with a fluid rhythm.",
           price: "Price from $600.00 MXN",
-          duration: "Duration: 45 minutes",
+          duration: "Duration: 50 minutes",
           description:
             "An ancestral technique that combines yoga-like assisted stretches with deep pressure.",
           list: [
@@ -365,7 +365,7 @@ document.addEventListener("DOMContentLoaded", () => {
           summary:
             "Long, enveloping movements to release physical and emotional blockages.",
           price: "Price from $700.00 MXN",
-          duration: "Duration: 45 minutes",
+          duration: "Duration: 50 minutes",
           description:
             "A traditional Hawaiian technique characterized by long, flowing movements that relax the body and mind.",
           list: [
@@ -383,7 +383,7 @@ document.addEventListener("DOMContentLoaded", () => {
           summary:
             "Heat therapy with relaxing massage to release muscle tension.",
           price: "Price from $800.00 MXN",
-          duration: "Duration: 45 minutes",
+          duration: "Duration: 50 minutes",
           description:
             "It uses 37 hot volcanic stones placed on strategic points of the body to release muscular tension.",
           list: [
@@ -401,7 +401,7 @@ document.addEventListener("DOMContentLoaded", () => {
           summary:
             "Deep, precise maneuvers to relieve pain, stiffness and limited movement.",
           price: "Price from $450.00 MXN",
-          duration: "Duration: 45 minutes",
+          duration: "Duration: 50 minutes",
           description:
             "It combines deep techniques to treat injuries, contractures and improve mobility.",
           list: [
@@ -419,7 +419,7 @@ document.addEventListener("DOMContentLoaded", () => {
           summary:
             "Deep massage with complementary techniques for athletes and people with high physical demand.",
           price: "Price from $600.00 MXN",
-          duration: "Duration: 45 minutes",
+          duration: "Duration: 50 minutes",
           description:
             "A specialized massage for athletes that may include techniques such as cupping, acupuncture, moxa and neuromuscular taping.",
           list: [
@@ -437,7 +437,7 @@ document.addEventListener("DOMContentLoaded", () => {
           summary:
             "Gentle movements to stimulate the lymphatic system and reduce fluid retention.",
           price: "Price from $600.00 MXN",
-          duration: "Duration: 45 minutes",
+          duration: "Duration: 50 minutes",
           description:
             "A delicate and precise technique that supports the elimination of toxins and retained fluids, providing a clear feeling of lightness.",
           list: [
@@ -454,8 +454,8 @@ document.addEventListener("DOMContentLoaded", () => {
           title: "Holistic balance and renewal",
           summary:
             "A holistic massage to harmonize body, mind and energy.",
-          price: "Price from $750.00 MXN",
-          duration: "Duration: 45 minutes",
+          price: "Price from $700.00 MXN",
+          duration: "Duration: 50 minutes",
           description:
             "Ayurveda massage uses oils and flowing maneuvers to support the body's overall balance and promote deep relaxation.",
           list: [
@@ -473,7 +473,7 @@ document.addEventListener("DOMContentLoaded", () => {
           summary:
             "A soft technique to relax, harmonize and create a feeling of lightness.",
           price: "Price from $600.00 MXN",
-          duration: "Duration: 45 minutes",
+          duration: "Duration: 50 minutes",
           description:
             "Miyana offers a soft and enveloping relaxation experience focused on restoring balance and body wellbeing.",
           list: [

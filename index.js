@@ -31,6 +31,8 @@ const i18n = {
     service_tatuajes: "Eliminación de Tatuajes",
     cursos_title: "Cursos",
     cursos_subtitle: "Capacítate con nosotros.",
+    cursos_proximo_titulo: "Próximo curso: Masaje Profesional.",
+    cursos_proximo_texto: "21 y 22 de noviembre, de 10:00 a. m. a 4:00 p. m. Anticipo de $500, cupo para 5 personas. Lo imparte Mary Peña.",
     cursos_gallery_aria: "Galería de cursos",
     cursos_prev: "Curso anterior",
     cursos_next: "Curso siguiente",
@@ -67,7 +69,7 @@ const i18n = {
     footer_services: "Servicios",
     footer_book: "Reserva",
     promo_title: "Promociones",
-    promo_subtitle: "Aprovecha nuestras promociones. Haz clic para ver más.",
+    promo_subtitle: "Aprovecha nuestras promociones. Haz clic para agendar tu cita.",
     promo_close: "Cerrar promociones",
   },
   en: {
@@ -102,6 +104,8 @@ const i18n = {
     service_tatuajes: "Tattoo Removal",
     cursos_title: "Courses",
     cursos_subtitle: "Train with us.",
+    cursos_proximo_titulo: "Next course: Professional Massage.",
+    cursos_proximo_texto: "November 21 and 22, 10:00 a.m. to 4:00 p.m. $500 deposit, limited to 5 people. Taught by Mary Peña.",
     cursos_gallery_aria: "Course gallery",
     cursos_prev: "Previous course",
     cursos_next: "Next course",
@@ -136,7 +140,7 @@ const i18n = {
     footer_services: "Services",
     footer_book: "Book",
     promo_title: "Promotions",
-    promo_subtitle: "Take advantage of our promotions. Click to see more.",
+    promo_subtitle: "Take advantage of our promotions. Click to book your appointment.",
     promo_close: "Close promotions",
   },
 };
@@ -188,6 +192,8 @@ function applyLanguage(lang) {
 
   setText("#cursos .section__head h2", t.cursos_title);
   setText("#cursos .section__head .muted", t.cursos_subtitle);
+  setText("#cursos .cursos__proximo strong", t.cursos_proximo_titulo);
+  setText("#cursos .cursos__proximo span", t.cursos_proximo_texto);
   setAttr(".carousel--courses", "aria-label", t.cursos_gallery_aria);
   setAttr(".carousel--courses .carousel__btn.prev", "aria-label", t.cursos_prev);
   setAttr(".carousel--courses .carousel__btn.next", "aria-label", t.cursos_next);

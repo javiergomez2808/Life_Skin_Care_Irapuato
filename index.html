@@ -194,6 +194,10 @@
           <h2>Cursos</h2>
           <p class="muted">Capacítate con nosotros.</p>
         </div>
+        <p class="cursos__proximo">
+          <strong>Próximo curso: Masaje Profesional.</strong>
+          <span>21 y 22 de noviembre, de 10:00 a. m. a 4:00 p. m. Anticipo de $500, cupo para 5 personas. Lo imparte Mary Peña.</span>
+        </p>
 
         <!-- Carrusel Cursos -->
         <div class="carousel carousel--courses" data-carousel aria-label="Galería de cursos">
@@ -201,11 +205,6 @@
             <div class="carousel__slide">
               <a href="./Servicios/Cursos.html">
                 <img src="./images/Cursos/Curso_1.jpeg" alt="Clase de masajes: viernes de 3 a 4 pm, $120 por sesión, sin experiencia previa" />
-              </a>
-            </div>
-            <div class="carousel__slide">
-              <a href="./Servicios/Cursos.html">
-                <img src="./images/Cursos/Masje_19-20.jpeg" alt="Curso de Masaje Profesional 19 y 20 de septiembre en Irapuato: masaje profundo, ventosas y moxibución" />
               </a>
             </div>
             <div class="carousel__slide">
@@ -221,7 +220,6 @@
           <div class="carousel__dots" aria-label="Seleccionar curso">
             <button class="dot active" aria-label="Curso 1"></button>
             <button class="dot" aria-label="Curso 2"></button>
-            <button class="dot" aria-label="Curso 3"></button>
           </div>
         </div>
       </div>
@@ -372,23 +370,21 @@
     </section>
   </main>
 
-  <!-- Popup de Promociones -->
-  <div class="promo-popup" id="promoPopup" role="dialog" aria-modal="true" aria-labelledby="promoPopupTitle" hidden>
+  <!-- Popup de promociones. data-hasta: último día que aparece (después ya no se abre solo).
+       Para la siguiente promoción, cambia la imagen, el texto alternativo y la fecha. -->
+  <div class="promo-popup" id="promoPopup" role="dialog" aria-modal="true" aria-labelledby="promoPopupTitle" data-hasta="2026-11-15" hidden>
     <div class="promo-popup__overlay" data-promo-close></div>
     <div class="promo-popup__dialog">
-      <button class="promo-popup__close" type="button" aria-label="Cerrar promociones" data-promo-close>&times;</button> 
+      <button class="promo-popup__close" type="button" aria-label="Cerrar promociones" data-promo-close>&times;</button>
       <h2 class="promo-popup__title" id="promoPopupTitle">Promociones</h2>
-      <p class="promo-popup__subtitle">Aprovecha nuestras promociones. Haz clic para ver más.</p>
-      <div class="promo-popup__grid">
-        <a class="promo-popup__item" href="./Servicios/Faciales.html">
-          <img src="./images/Promociones/Hollywood_Peel_Sep.jpeg" alt="Hollywood Peel con 20% de descuento en septiembre" width="940" height="788" />
-        </a>
-        <a class="promo-popup__item" href="./Servicios/Faciales.html">
-          <img src="./images/Promociones/Mixologia_Facial.jpeg" alt="Mixología Facial, nuevo tratamiento facial" width="940" height="788" />
+      <p class="promo-popup__subtitle">Aprovecha nuestras promociones. Haz clic para agendar tu cita.</p>
+      <div class="promo-popup__grid promo-popup__grid--una">
+        <a class="promo-popup__item" href="https://reservas.angelgomezp.dev/lifeskin">
+          <img src="./images/Promociones/Buen_Fin_2026.jpeg" alt="Fin Increíble: 20% de descuento en todos nuestros servicios este 13, 14 y 15 de noviembre. Atención por citas. Adquiere tu paquete y se respeta la promoción." width="840" height="1112" />
         </a>
       </div>
     </div>
-  </div>  
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
@@ -496,7 +492,9 @@
           document.body.classList.remove('promo-open');
         };
 
-        setTimeout(openPopup, 5000);
+        // Solo mientras la promoción está vigente (hasta el final de data-hasta, hora de Irapuato)
+        const hasta = promoPopup.dataset.hasta;
+        if (!hasta || Date.now() <= Date.parse(`${hasta}T23:59:59-06:00`)) setTimeout(openPopup, 5000);
 
         promoPopup.querySelectorAll('[data-promo-close]').forEach((el) => {
           el.addEventListener('click', closePopup);
