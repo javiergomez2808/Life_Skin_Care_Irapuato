@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (hintLabel) hintLabel.textContent = content.cardHint;
 
     if (detailParagraphs[0]) detailParagraphs[0].textContent = cardTranslations.description;
-    if (detailParagraphs[1]) detailParagraphs[1].innerHTML = `<strong>${content.lang === "en" ? "Prices per zone (per session)" : "Precios por zona (por sesión)"}</strong>`;
+    if (detailParagraphs[1]) detailParagraphs[1].innerHTML = `<strong>${content.htmlLang === "en" ? "Prices per zone (per session)" : "Precios por zona (por sesión)"}</strong>`;
 
     if (lists[0] && cardTranslations.list) {
       const items = lists[0].querySelectorAll("li");
@@ -199,7 +199,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (footerLinks[1]) footerLinks[1].textContent = content.footerReserve;
   }
 
-  const saved = localStorage.getItem("siteLanguage");
+  let saved = null;
+  try {
+    saved = localStorage.getItem("siteLanguage");
+  } catch (e) {}
   const initialLang = saved && translations[saved] ? saved : (selector ? selector.value : "es");
   if (selector) selector.value = initialLang;
   applyTranslations(initialLang);
@@ -208,7 +211,9 @@ document.addEventListener("DOMContentLoaded", () => {
     selector.addEventListener("change", (event) => {
       const lang = event.target.value;
       applyTranslations(lang);
-      localStorage.setItem("siteLanguage", lang);
+      try {
+        localStorage.setItem("siteLanguage", lang);
+      } catch (e) {}
     });
   }
 });
