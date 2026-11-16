@@ -62,12 +62,13 @@ const i18n = {
     review_dots: "Seleccionar reseña",
     contact_title: "Reserva con nosotros",
     contact_text:
-      "Reserva en línea en un par de minutos: eliges el tratamiento, el día y la hora. Si prefieres, escríbenos por WhatsApp y con gusto te ayudamos.",
+      "Reserva en línea en un par de minutos: eliges el tratamiento, el día y la hora. Si prefieres, escríbenos por WhatsApp.",
     contact_whatsapp: "WhatsApp:",
     contact_note:
       "Incluye el servicio, la fecha y la hora que prefieres al ponerte en contacto con nosotros.",
     footer_services: "Servicios",
     footer_book: "Reserva",
+    footer_rights: "Todos los derechos reservados.",
     promo_title: "Promociones",
     promo_subtitle: "Aprovecha nuestras promociones. Haz clic para agendar tu cita.",
     promo_close: "Cerrar promociones",
@@ -139,6 +140,7 @@ const i18n = {
       "Please include your preferred service, date, and time when contacting us.",
     footer_services: "Services",
     footer_book: "Book",
+    footer_rights: "All rights reserved.",
     promo_title: "Promotions",
     promo_subtitle: "Take advantage of our promotions. Click to book your appointment.",
     promo_close: "Close promotions",
@@ -227,6 +229,7 @@ function applyLanguage(lang) {
 
   setText('.footer__links a[href="#services"]', t.footer_services);
   setText('.footer__links a[href="#contact"]', t.footer_book);
+  setText("#footer-rights", t.footer_rights);
 
   setText("#promoPopupTitle", t.promo_title);
   setText(".promo-popup__subtitle", t.promo_subtitle);
@@ -237,7 +240,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const selector = document.getElementById("language-select");
   if (!selector) return;
 
-  const saved = localStorage.getItem("siteLanguage");
+  let saved = null;
+  try {
+    saved = localStorage.getItem("siteLanguage");
+  } catch (e) {}
   const initialLang = saved && i18n[saved] ? saved : selector.value || "es";
 
   selector.value = initialLang;
@@ -246,6 +252,8 @@ document.addEventListener("DOMContentLoaded", () => {
   selector.addEventListener("change", (event) => {
     const lang = event.target.value;
     applyLanguage(lang);
-    localStorage.setItem("siteLanguage", lang);
+    try {
+      localStorage.setItem("siteLanguage", lang);
+    } catch (e) {}
   });
 });

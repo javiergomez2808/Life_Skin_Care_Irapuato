@@ -176,7 +176,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (footerLinks[1]) footerLinks[1].textContent = content.footerReserve;
   }
 
-  const saved = localStorage.getItem("siteLanguage");
+  let saved = null;
+  try {
+    saved = localStorage.getItem("siteLanguage");
+  } catch (e) {}
   const initialLang = saved && translations[saved] ? saved : (selector ? selector.value : "es");
   if (selector) selector.value = initialLang;
   applyTranslations(initialLang);
@@ -185,7 +188,9 @@ document.addEventListener("DOMContentLoaded", () => {
     selector.addEventListener("change", (event) => {
       const lang = event.target.value;
       applyTranslations(lang);
-      localStorage.setItem("siteLanguage", lang);
+      try {
+        localStorage.setItem("siteLanguage", lang);
+      } catch (e) {}
     });
   }
 });
