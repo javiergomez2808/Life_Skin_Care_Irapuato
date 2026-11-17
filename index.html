@@ -370,17 +370,17 @@
     </section>
   </main>
 
-  <!-- Popup de promociones. data-hasta: último día que aparece (después ya no se abre solo).
-       Para la siguiente promoción, cambia la imagen, el texto alternativo y la fecha. -->
-  <div class="promo-popup" id="promoPopup" role="dialog" aria-modal="true" aria-labelledby="promoPopupTitle" data-hasta="2026-11-15" hidden>
+  <!-- Popup del inicio (una promoción o un curso). data-hasta: último día que aparece (después ya no se abre solo).
+       Para cambiarlo: la imagen, su tamaño, el enlace y la fecha aquí, y los textos promo_* (español e inglés) en index.js. -->
+  <div class="promo-popup" id="promoPopup" role="dialog" aria-modal="true" aria-labelledby="promoPopupTitle" data-hasta="2026-11-20" hidden>
     <div class="promo-popup__overlay" data-promo-close></div>
     <div class="promo-popup__dialog">
-      <button class="promo-popup__close" type="button" aria-label="Cerrar promociones" data-promo-close>&times;</button>
-      <h2 class="promo-popup__title" id="promoPopupTitle">Promociones</h2>
-      <p class="promo-popup__subtitle">Aprovecha nuestras promociones. Haz clic para agendar tu cita.</p>
+      <button class="promo-popup__close" type="button" aria-label="Cerrar" data-promo-close>&times;</button>
+      <h2 class="promo-popup__title" id="promoPopupTitle">Curso de Masaje Profesional</h2>
+      <p class="promo-popup__subtitle">21 y 22 de noviembre, de 10:00 a. m. a 4:00 p. m. Lo imparte Mary Peña. Anticipo de $500, cupo para 5 personas. Haz clic para apartar tu lugar por WhatsApp.</p>
       <div class="promo-popup__grid promo-popup__grid--una">
-        <a class="promo-popup__item" href="https://reservas.angelgomezp.dev/lifeskin">
-          <img loading="lazy" src="./images/Promociones/Buen_Fin_2026.jpeg" alt="Fin Increíble: 20% de descuento en todos nuestros servicios este 13, 14 y 15 de noviembre. Atención por citas. Adquiere tu paquete y se respeta la promoción." width="840" height="1112" />
+        <a class="promo-popup__item" href="https://wa.me/524621059586?text=Hola%2C%20quiero%20apartar%20mi%20lugar%20en%20el%20curso%20de%20Masaje%20Profesional%20del%2021%20y%2022%20de%20noviembre." target="_blank" rel="noopener">
+          <img loading="lazy" src="./images/Cursos/Masaje_Profesional.jpeg" alt="Curso de Masaje Profesional con certificación: moxibución, ventosas, vendaje neuromuscular, masaje visceral, drenaje linfático y masaje craneal" width="1138" height="1280" />
         </a>
       </div>
     </div>
