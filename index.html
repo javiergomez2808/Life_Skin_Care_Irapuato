@@ -370,19 +370,15 @@
     </section>
   </main>
 
-  <!-- Popup del inicio (una promoción o un curso). data-hasta: último día que aparece (después ya no se abre solo).
-       Para cambiarlo: la imagen, su tamaño, el enlace y la fecha aquí, y los textos promo_* (español e inglés) en index.js. -->
-  <div class="promo-popup" id="promoPopup" role="dialog" aria-modal="true" aria-labelledby="promoPopupTitle" data-hasta="2026-11-20" hidden>
+  <!-- Popup de promociones: lo llena la dueña desde la app (Configuración → Promociones del sitio). El script de abajo
+       pide las vigentes de hoy y pone aquí sus fotos (de 1 a 4). Si el pop-up está apagado o no hay promociones, no aparece. -->
+  <div class="promo-popup" id="promoPopup" role="dialog" aria-modal="true" aria-labelledby="promoPopupTitle" hidden>
     <div class="promo-popup__overlay" data-promo-close></div>
     <div class="promo-popup__dialog">
-      <button class="promo-popup__close" type="button" aria-label="Cerrar" data-promo-close>&times;</button>
-      <h2 class="promo-popup__title" id="promoPopupTitle">Curso de Masaje Profesional</h2>
-      <p class="promo-popup__subtitle">21 y 22 de noviembre, de 10:00 a. m. a 4:00 p. m. Lo imparte Mary Peña. Anticipo de $500, cupo para 5 personas. Haz clic para apartar tu lugar por WhatsApp.</p>
-      <div class="promo-popup__grid promo-popup__grid--una">
-        <a class="promo-popup__item" href="https://wa.me/524621059586?text=Hola%2C%20quiero%20apartar%20mi%20lugar%20en%20el%20curso%20de%20Masaje%20Profesional%20del%2021%20y%2022%20de%20noviembre." target="_blank" rel="noopener">
-          <img loading="lazy" src="./images/Cursos/Masaje_Profesional.jpeg" alt="Curso de Masaje Profesional con certificación: moxibución, ventosas, vendaje neuromuscular, masaje visceral, drenaje linfático y masaje craneal" width="1138" height="1280" />
-        </a>
-      </div>
+      <button class="promo-popup__close" type="button" aria-label="Cerrar promociones" data-promo-close>&times;</button>
+      <h2 class="promo-popup__title" id="promoPopupTitle">Promociones</h2>
+      <p class="promo-popup__subtitle">Aprovecha nuestras promociones. Haz clic para agendar tu cita.</p>
+      <div class="promo-popup__grid" data-promos></div>
     </div>
   </div>
 
@@ -480,7 +476,50 @@
 
       document.getElementById('year').textContent = new Date().getFullYear();
 
-      // Popup de Promociones (aparece a los 3 segundos)
+      // Promociones del pop-up, desde la base de la app (Supabase). La dirección y la llave son PÚBLICAS por diseño
+      // (las mismas de la página de reserva): lo que protege los datos son las reglas de la base. La llave secreta
+      // nunca va aquí. La base entrega solo las vigentes de hoy, hasta las que eligió la dueña (máximo 4).
+      const SUPABASE_URL = 'https://bedqyqlsyfjfsfkzstpa.supabase.co';
+      const SUPABASE_LLAVE = 'sb_publishable_oOvzM7VYhoJc4hn7LArzrw_In2d0ZOE';
+      async function cargarPromociones(popup) {
+        const r = await fetch(`${SUPABASE_URL}/rest/v1/rpc/sitio_promociones`, {
+          method: 'POST',
+          headers: { apikey: SUPABASE_LLAVE, 'content-type': 'application/json' },
+          body: JSON.stringify({ p_slug: 'lifeskin' }),
+        });
+        if (!r.ok) return false;
+        const datos = await r.json();
+        const promos = datos && datos.activo && Array.isArray(datos.promociones) ? datos.promociones.slice(0, 4) : [];
+        if (!promos.length) return false;
+        // Al tocar una: la reserva en línea (la misma del botón «Reserva») o WhatsApp con el mensaje escrito
+        const reserva = (document.querySelector('a[data-reserva]') || {}).href || 'https://reservas.angelgomezp.dev/lifeskin';
+        const whatsapp = String(datos.whatsapp || '').replace(/\D/g, '');
+        const grid = popup.querySelector('[data-promos]');
+        grid.classList.toggle('promo-popup__grid--una', promos.length === 1);
+        grid.replaceChildren(...promos.map((p) => {
+          const a = document.createElement('a');
+          a.className = 'promo-popup__item';
+          if (p.enlace === 'whatsapp' && whatsapp) {
+            const texto = p.tipo === 'curso' ? `Hola, quiero apartar mi lugar en el curso «${p.titulo}».` : `Hola, me interesa la promoción «${p.titulo}».`;
+            a.href = `https://wa.me/${whatsapp}?text=${encodeURIComponent(texto)}`;
+            a.target = '_blank';
+            a.rel = 'noopener';
+          } else {
+            a.href = reserva;
+          }
+          const img = document.createElement('img');
+          img.src = `${SUPABASE_URL}/storage/v1/object/public/promociones/${String(p.imagen).split('/').map(encodeURIComponent).join('/')}`;
+          img.alt = p.titulo;
+          img.width = p.ancho;
+          img.height = p.alto;
+          img.decoding = 'async';
+          a.appendChild(img);
+          return a;
+        }));
+        return true;
+      }
+
+      // Popup de promociones (aparece a los 5 segundos, si hay promociones vigentes)
       const promoPopup = document.getElementById('promoPopup');
       if (promoPopup) {
         const openPopup = () => {
@@ -492,9 +531,10 @@
           document.body.classList.remove('promo-open');
         };
 
-        // Solo mientras la promoción está vigente (hasta el final de data-hasta, hora de Irapuato)
-        const hasta = promoPopup.dataset.hasta;
-        if (!hasta || Date.now() <= Date.parse(`${hasta}T23:59:59-06:00`)) setTimeout(openPopup, 5000);
+        // Las promociones las decide la dueña en la app; si no hay o no responde, el pop-up no aparece
+        cargarPromociones(promoPopup)
+          .then((hay) => { if (hay) setTimeout(openPopup, 5000); })
+          .catch(() => {});
 
         promoPopup.querySelectorAll('[data-promo-close]').forEach((el) => {
           el.addEventListener('click', closePopup);

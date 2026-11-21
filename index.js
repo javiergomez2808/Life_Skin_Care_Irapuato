@@ -69,11 +69,9 @@ const i18n = {
     footer_services: "Servicios",
     footer_book: "Reserva",
     footer_rights: "Todos los derechos reservados.",
-    promo_title: "Curso de Masaje Profesional",
-    promo_subtitle: "21 y 22 de noviembre, de 10:00 a. m. a 4:00 p. m. Lo imparte Mary Peña. Anticipo de $500, cupo para 5 personas. Haz clic para apartar tu lugar por WhatsApp.",
-    promo_close: "Cerrar",
-    promo_alt: "Curso de Masaje Profesional con certificación: moxibución, ventosas, vendaje neuromuscular, masaje visceral, drenaje linfático y masaje craneal",
-    promo_enlace: "https://wa.me/524621059586?text=Hola%2C%20quiero%20apartar%20mi%20lugar%20en%20el%20curso%20de%20Masaje%20Profesional%20del%2021%20y%2022%20de%20noviembre.",
+    promo_title: "Promociones",
+    promo_subtitle: "Aprovecha nuestras promociones. Haz clic para agendar tu cita.",
+    promo_close: "Cerrar promociones",
   },
   en: {
     html_lang: "en",
@@ -143,11 +141,9 @@ const i18n = {
     footer_services: "Services",
     footer_book: "Book",
     footer_rights: "All rights reserved.",
-    promo_title: "Professional Massage Course",
-    promo_subtitle: "November 21 and 22, 10:00 a.m. to 4:00 p.m. Taught by Mary Peña. $500 deposit, limited to 5 people. Click to save your spot on WhatsApp.",
-    promo_close: "Close",
-    promo_alt: "Professional Massage course with certification: moxibustion, cupping, kinesiology taping, visceral massage, lymphatic drainage and cranial massage",
-    promo_enlace: "https://wa.me/524621059586?text=Hi%2C%20I%27d%20like%20to%20save%20my%20spot%20in%20the%20Professional%20Massage%20course%20on%20November%2021%20and%2022.",
+    promo_title: "Promotions",
+    promo_subtitle: "Take advantage of our promotions. Click to book your appointment.",
+    promo_close: "Close promotions",
   },
 };
 
@@ -238,8 +234,6 @@ function applyLanguage(lang) {
   setText("#promoPopupTitle", t.promo_title);
   setText(".promo-popup__subtitle", t.promo_subtitle);
   setAttr(".promo-popup__close", "aria-label", t.promo_close);
-  setAttr(".promo-popup__item", "href", t.promo_enlace);
-  setAttr(".promo-popup__item img", "alt", t.promo_alt);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
