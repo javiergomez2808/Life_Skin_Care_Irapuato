@@ -796,3 +796,12 @@ body.promo-open { overflow: hidden; }
   max-width: 420px;
   margin: 0 auto;
 }
+
+/* Con 3 promociones, la tercera va al centro (en celular van una debajo de otra) */
+@media (min-width: 561px) {
+  .promo-popup__grid:not(.promo-popup__grid--una) > .promo-popup__item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 9px);
+  }
+}
